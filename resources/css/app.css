@@ -1,0 +1,70 @@
+@import 'tailwindcss';
+@import "./utilities/animations.css"; 
+
+@import "./components/navbar.css";
+@import "./components/header.css";
+
+@import './components/global.css';
+@import './components/quiz.css';
+@import './components/testPages.css';  
+
+ 
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '..*.js';
+
+@theme {
+  --color-primary: '#163853';
+  --color-secondary: '#e0f2fe';
+  --color-text: '#1f2937';
+  --color-bg: '#ffffff';
+  --color-light: '#f9fafb';
+  --color-accent: '#DEAB48';
+}
+
+/* TODO 
+- gestion couleurs
+- revoir logique */
+@keyframes zoomfade {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  10% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+}
+
+/* On cible le hover du parent avec .group:hover et applique l'animation à chaque image */
+.group:hover img:nth-child(1) {
+  animation: zoomfade 4s linear forwards;
+  animation-delay: 0s;
+}
+
+.group:hover img:nth-child(2) {
+  animation: zoomfade 4s linear forwards;
+  animation-delay: 2s;
+}
+
+.group:hover img:nth-child(3) {
+  animation: zoomfade 4s linear forwards;
+  animation-delay: 4s;
+}
+
+.group:hover img:nth-child(4) {
+  animation: zoomfade 4s linear forwards;
+  animation-delay: 6s;
+}
+
+@tailwind utilities;
+
+

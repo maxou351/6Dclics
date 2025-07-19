@@ -1,0 +1,214 @@
+:root {
+  --color-primary: #163853;
+  --color-secondary: #e0f2fe;
+  --color-text: #1f2937;
+  --color-bg: #ffffff;
+  --color-light: #f9fafb;
+  --color-accent: #fbbf24;
+}
+
+/* TODO : passer body en tailwind */
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+}
+
+/* === PRÉSENTATION === */
+.section-pres {
+  @apply bg-white py-12;
+}
+
+.container-pres {
+  @apply max-w-5xl xl:max-w-6xl mx-auto px-4 md:px-8 space-y-8 md:space-y-12;
+}
+
+/* === BLOG CONTENT  === */
+
+    /* === ELEMENTS  === */
+    /* btn in texte */
+    .button-text{
+      @apply inline-flex items-center gap-1 px-2 py-1 bg-accent/10 text-accent text-sm font-medium rounded-md hover:bg-accent/20 transition;
+    }
+
+    /* icone btn in texte */
+    .button-text-icone{
+      @apply w-4 h-4 transition-transform duration-300 group-hover:translate-x-1;
+    }
+
+    /* info sup */
+    .bloc-info {
+      @apply bg-light border-l-4 border-accent px-4 py-3 rounded-md;
+    }
+
+    /* quote */
+    .bloc-quote {
+      @apply border-l-4 border-accent pl-6 italic text-lg my-6 relative;
+    }
+
+    /* barre icone */
+    .barre-icone {
+      @apply p-4 rounded-xl shadow-inner text-center grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm font-semibold ;
+    }
+
+/* === BLOCKS === */
+.bloc-txt{
+  @apply space-y-6 max-w-3xl mx-auto text-primary leading-relaxed;
+}
+
+.bloc-duo {
+  @apply flex flex-col md:flex-row-reverse items-center gap-8;
+}
+
+.txt-bloc-duo {
+  @apply space-y-4 flex-1 text-primary leading-relaxed;
+}
+
+.img-bloc-duo {
+  @apply rounded-xl shadow-md w-48 sm:w-56 lg:w-64 mx-auto md:mx-0 ;
+}
+
+.div-img-bloc-duo {
+  @apply flex justify-center md:justify-start w-full md:w-auto shrink-0;
+}
+
+/* === TIMELINE ===*/
+.timeline-group {
+  @apply mb-10 ms-4;
+}
+
+.timeline-point {
+  @apply absolute w-6 h-6 bg-accent rounded-full mt-10 -start-3.5 border-4 border-white ;
+}
+
+.timeline-card {
+  @apply bg-white p-6 rounded-lg shadow-md transition duration-300 ease-in-out;
+}
+
+.timeline-titre {
+  @apply  text-xl font-semibold text-primary;
+}
+
+.timeline-desc {
+  @apply mt-2 text-primary;
+}
+
+.timeline-group:hover 
+.timeline-point::before {
+  @apply absolute rounded-full bg-accent opacity-75;
+  content: "";
+  inset: 0;
+  animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+  z-index: -1;
+}
+
+/* CONTACT FOM */
+.form-input {
+  @apply w-full px-4 py-3 rounded-md border border-gray-300 text-text placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary;
+}
+
+.btn-primary {
+  @apply inline-block bg-secondary text-primary font-semibold py-2 px-6 rounded-md transition duration-200 hover:bg-[#bae6fd];
+}
+
+/* === CV SECTION === 
+TODO -> TAilwind*/
+.cv-section {
+  padding: 3rem 1rem;
+  background-color: var(--color-bg);
+}
+
+.cv-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cv-list {
+  list-style-type: disc;
+  padding-left: 1.25rem;
+  margin-top: 1rem;
+  color: #4b5563;
+}
+
+/* === SERVICES === */
+.services-section {
+  @apply bg-light py-6 md:py-8 px-4;
+}
+
+.services-container {
+  @apply max-w-6xl mx-auto text-center;
+}
+
+.services-title {
+  @apply text-3xl md:text-4xl font-bold text-primary mb-12;
+}
+
+.services-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8;
+  }
+
+.services-card {
+  @apply block bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 ease-in-out p-6 text-center cursor-pointer;
+}
+
+.services-card-icone {
+  @apply w-12 h-12 text-accent mb-4 transition group-hover:scale-110;
+}
+
+.services-card-title {
+  @apply text-xl font-semibold text-primary mb-2;
+}
+
+.services-card-text {
+  @apply text-primary text-sm mb-4;
+}
+
+.services-card-btn {
+  @apply inline-block mt-auto text-primary font-semibold hover:underline;
+}
+
+.services-card:focus-visible {
+  @apply ring-2 ring-accent ring-offset-2;
+}
+
+/* === CTA FINAL === */
+.cta-final {
+  @apply bg-primary py-10 px-4;
+}
+
+.cta-container {
+  @apply max-w-4xl mx-auto text-center text-white space-y-4;
+}
+
+.cta-title {
+  @apply text-2xl font-semibold ;
+}
+
+.cta-text {
+  @apply mt-2;
+}
+
+.cta-list {
+  @apply mt-6 grid grid-cols-1 md:grid-cols-3 gap-8 text-center items-center justify-items-center;
+}
+
+.cta-link {
+  @apply flex flex-col items-center space-y-2 cursor-pointer;
+}
+
+.cta-item {
+  @apply font-semibold text-sm hover:underline;
+}
+
+.cta-icon {
+  @apply w-8 h-8 transition-transform duration-300 group-hover:scale-110;
+}
+
+/* Hidden in mobile */
+@media (max-width: 639px) {
+  .hidden-mobile {
+    display: none !important;
+  }
+}
+

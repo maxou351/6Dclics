@@ -1,0 +1,102 @@
+@layer utilities {
+  /* ============================== */
+  /* = ANIMATIONS PERSONNALISÉES = */
+  /* ============================== */
+
+  /* 
+   * Fade in depuis le bas 
+   * Utilisé pour faire apparaître un élément avec une transition douce verticale
+   */
+  @keyframes fade-in {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in {
+    opacity: 0;
+    transform: translateY(1rem);
+    animation: fade-in 0.8s ease-out forwards;
+  }
+
+  /* 
+   * Slide in depuis la gauche
+   * Idéal pour les blocs qui apparaissent latéralement
+   */
+  @keyframes slide-in-left {
+    0% {
+      opacity: 0;
+      transform: translateX(-1rem);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .animate-slide-in-left {
+    animation: slide-in-left 1.2s ease-out forwards;
+  }
+
+  /* 
+   * Apparition en fondu avec un léger décalage vertical
+   * Listes avec des délais décalés
+   */
+  @keyframes fade-stagger {
+    from {
+      opacity: 0;
+      transform: translateY(0.5rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-stagger {
+    animation: fade-stagger 0.5s ease-out forwards;
+  }
+
+  /* 
+   * Animation de type "balancier" vers la gauche
+   * Utilisée sur une flèche par exemple pour inciter à l’action
+   */
+  @keyframes swipe-left {
+    0%, 100% {
+      transform: translateX(0) rotate(180deg);
+      opacity: 0.3;
+    }
+    50% {
+      transform: translateX(-10px) rotate(180deg);
+      opacity: 1;
+    }
+  }
+
+  .animate-swipe-left {
+    animation: swipe-left 1.2s infinite;
+  }
+
+  /* Animation de type "ping" (effet d’onde depuis un point central) existe already in tailwind ? */
+  @keyframes ping {
+    0% {
+      transform: scale(1);
+      opacity: 0.75;
+    }
+    75%, 100% {
+      transform: scale(2);
+      opacity: 0;
+    }
+  }
+}
+
+/* MAYBE USED SOMEWHERE
+Rotation statique d’un élément */
+/* .rotate-[180deg] {
+  transform: rotate(180deg);
+} */
+
+/* USED IN GALERIE Délai standard d’animation – géré directement dans Tailwind */
+/* .delay-200 {
+  animation-delay: 0.2s;
+} */

@@ -1,0 +1,44 @@
+.component-quiz {
+  @apply py-12;
+}
+
+.component-quiz__container {
+  @apply max-w-xl mx-auto px-4;
+}
+
+.component-quiz__title {
+  @apply text-2xl font-semibold text-center mb-8;
+}
+
+.component-quiz__step {
+  @apply mb-8;
+}
+
+.component-quiz__question {
+  @apply font-medium mb-4;
+}
+
+.component-quiz__answers {
+  @apply flex flex-col gap-2;
+}
+
+/* hover:bg-opacity-90 */
+.component-quiz__btn {
+  @apply bg-primary text-white px-4 py-2 rounded transition cursor-pointer; 
+}
+
+.component-quiz__error {
+  @apply text-center text-red-600 mt-4;
+}
+
+.quiz-section-hidden {
+  @apply transition-opacity duration-500 mb-12 p-6 bg-white rounded-2xl shadow-sm border border-gray-100 transition-all duration-300;
+}
+
+.quiz-section-title {
+  @apply text-2xl font-bold text-primary mb-4;
+}
+
+.quiz-section-desc {
+  @apply text-primary leading-relaxed;
+}

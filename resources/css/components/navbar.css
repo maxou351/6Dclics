@@ -1,0 +1,181 @@
+/* === Navbar === */
+/* TODO pass to tailwind
+clic outide the bar when depliée */
+body, html {
+  height: auto; /* vérifie qu’aucun parent n’a overflow: hidden ou height: 100% */
+}
+
+.navbar {
+  background-color: var(--color-bg);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.navbar__container {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* === Brand === */
+.navbar__brand {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.navbar__brand img {
+  display: inline-block;
+  height: 2rem;
+  width: auto;
+}
+
+.navbar__brand span {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+/* === Toggle hamburger === */
+.navbar__toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.navbar__toggle:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.navbar__toggle-icon {
+  width: 25px;
+  height: 3px;
+  background-color: var(--color-primary);
+  border-radius: 2px;
+}
+
+/* === Menu desktop === */
+.navbar__menu {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar__link {
+  position: relative;
+  display: inline-block; /* nécessaire pour les effets de transform */
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: var(--color-text);
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect : déplacement + soulignement animé */
+.navbar__link:hover {
+  color: var(--color-primary);
+  transform: translateY(-2px); /* petit “saut” */
+}
+
+/* Soulignement jaune accent au hover */
+.navbar__link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 2px;
+  background-color: var(--color-accent);
+  transition: width 0.3s ease;
+}
+
+/* Au survol, on étend le soulignement */
+.navbar__link:hover::after {
+  width: 100%;
+}
+
+/* === Responsive mobile === */
+@media (max-width: 768px) {
+  .navbar__toggle {
+    display: flex;
+  }
+
+  .navbar__menu {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: var(--color-bg);
+    width: 200px;
+    flex-direction: column;
+    gap: 0;
+    border: 1px solid var(--color-light);
+    border-radius: 6px;
+    padding: 0.5rem 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
+  }
+
+  .navbar__menu--active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .navbar__item {
+    border-bottom: 1px solid var(--color-light);
+  }
+
+  .navbar__item:last-child {
+    border-bottom: none;
+  }
+
+  .navbar__link {
+    padding: 0.75rem 1.5rem;
+    display: block;
+    color: var(--color-primary);
+  }
+}
+
+/* Mobile seulement Sticky part*/
+@media (max-width: 1024px) {
+  .navbar__toggle {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  }
+}
+
+/* Lien actif */
+.navbar__link.active::before {
+content: '•';
+color: var(--color-accent);
+margin-right: 0.4rem;
+font-size: 1.2rem;
+line-height: 1;
+display: inline-block;
+transform: translateY(2px);
+}
+
+.active {
+@apply font-semibold;
+}
+
+
