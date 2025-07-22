@@ -17,7 +17,18 @@ document.addEventListener('DOMContentLoaded', () => {
             steps[step].classList.add('hidden');
 
             const nextStep = steps[parseInt(step) + 1];
+
             if (nextStep) {
+                // Affiche la réponse précédente dans l’étape suivante
+                const nextStepIndex = parseInt(step) + 1;
+                const previousValue = quizData[`question${step}`];
+                const previousAnswerElement = document.getElementById(`previous-answer-${nextStepIndex}`);
+
+                if (previousAnswerElement) {
+                    const readableText = getReadableAnswer(step, previousValue);
+                    previousAnswerElement.textContent = `Vous avez indiqué : "${readableText}"`;
+                }
+
                 nextStep.classList.remove('hidden');
             } else {
                 // fin du quiz
@@ -37,6 +48,22 @@ document.addEventListener('DOMContentLoaded', () => {
         // targetSection.classList.remove('hidden');
         setTimeout(() => targetSection.classList.add('opacity-100'), 10);
         console.log(targetSection.classList);
+    }
+
+    function getReadableAnswer(step, value) {
+        const labels = {
+            1: {
+                beginner: "Débutant",
+                intermediate: "Intermédiaire",
+                advanced: "Avancé"
+            },
+            2: {
+                help: "Dépannage",
+                training: "Formation",
+                support: "Accompagnement"
+            }
+        };
+        return labels[step]?.[value] || value;
     }
 
     const startQuizBtn = document.getElementById('start-quiz-btn');

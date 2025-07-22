@@ -5,7 +5,13 @@
         <h2 class="component-quiz__title">{{ $title }}</h2>
 
         @foreach ($questions as $index => $question)
+
             <div id="quiz-step-{{ $index + 1 }}" class="component-quiz__step {{ $index > 0 ? 'hidden' : '' }}" data-step="{{ $index + 1 }}">
+                
+                @if ($index > 0)
+                    <div id="previous-answer-{{ $index + 1 }}" class="component-quiz__previous-answer mb-4 text-sm text-gray-600 italic"></div>
+                @endif
+                
                 <p class="component-quiz__question">{{ $question['text'] }}</p>
                 <div class="component-quiz__answers">
                     @foreach ($question['answers'] as $value => $label)
