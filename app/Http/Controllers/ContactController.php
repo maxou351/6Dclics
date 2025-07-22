@@ -8,6 +8,12 @@ use App\Mail\ContactMessage;
 
 class ContactController extends Controller
 {
+    public function show(Request $request)
+    {
+        $fromSection = $request->query('from'); // 'deb-depannage' par ex
+        return view('contact', compact('fromSection'));
+    }
+
     public function send(Request $request)
     {
         $validated = $request->validate([

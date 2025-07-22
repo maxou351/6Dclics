@@ -8,9 +8,9 @@
 --}}
 
 @section('content')
-<section class="py-12 px-4 bg-light text-text">
+<section class="py-12 px-4 bg-primary text-primary">
     <div class="max-w-3xl mx-auto">
-        <h2 class="text-3xl font-bold text-primary mb-6 text-center">Contactez-moi</h2>
+        <h2 class="text-3xl font-bold text-white mb-6 text-center">Contactez-moi</h2>
 
         @if ($errors->any())
             <div class="mb-6 bg-red-100 text-red-700 p-4 rounded">

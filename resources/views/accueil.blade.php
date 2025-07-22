@@ -6,7 +6,7 @@
 {{--
 TODO 
 - Mobile part : centrer cards 2
-- bandeau lateral plu^tot que fleches
+- bandeau lateral plutot que fleches
 - carrousel factorisable en js
 - optimiser sur mobile pour bien mettre en avant la suite des sections
 - ? sur le texte
@@ -21,7 +21,7 @@ TODO
 
         <div class="header-container">
             <h1 class="header-title">
-                <span class="relative z-20">Max Morelli</span>
+                <span class="relative z-20">Les 6 D'clics</span>
                 <span class="header-title-underline"></span>
             </h1> 
             <p class="header-desc">
@@ -38,9 +38,9 @@ TODO
                     {{-- Accompagnement --}}
                     <x-card-service
                         device="desktop"
-                        icon="heroicon-o-question-mark-circle"
+                        icon="heroicon-o-light-bulb"
                         title="Accompagnement & formation informatique"
-                        desc="Vous êtes un particulier en difficulté avec l'informatique et vous avez besoin d'aide ou de formation ?"
+                        desc="Vous êtes un particulier en questionnement avec l'informatique et vous avez besoin d'aide ou de formation"
                         url="/accompagnement"
                         label="En savoir plus"
                     />
@@ -50,7 +50,7 @@ TODO
                         device="desktop"
                         icon="heroicon-o-globe-alt"
                         title="Création, évolution & gestion de site web"
-                        desc="Vous êtes entrepreneur, artisan ou association et vous souhaitez un site clair, moderne et facile à gérer ?"
+                        desc="Vous êtes entrepreneur, artisan ou association et vous souhaitez un site clair, moderne et facile à gérer"
                         url="/creation-site"
                         label="Découvrir"
                     />
@@ -58,9 +58,9 @@ TODO
                     {{-- Développement --}}
                     <x-card-service
                         device="desktop"
-                        icon="heroicon-o-wrench-screwdriver"
+                        icon="heroicon-o-code-bracket"
                         title="Développement & missions techniques"
-                        desc="Vous êtes recruteur ou porteur de projet et vous cherchez un développeur fiable et expérimenté ?"
+                        desc="Vous êtes recruteur ou porteur de projet et vous cherchez un développeur fiable et expérimenté"
                         url="/profil-tech"
                         label="Voir le profil"
                     />
@@ -94,7 +94,7 @@ TODO
                 <div class="txt-bloc-duo">
                     <h2 class="text-3xl font-bold text-primary mb-4">Bienvenue !</h2>
                     <p>
-                        Je suis développeur web freelance, basé à Rennes.  
+                        Je suis Max MORELLI, développeur web freelance, basé à Rennes.  
                         Après cinq ans d'expérience en entreprise dans le développement web et logiciel, 
                         j’ai eu la chance de travailler sur des projets variés, parfois complexes, souvent ambitieux.
                         <a href="#parcours" class="button-text">
@@ -207,7 +207,7 @@ TODO
                     <h3 class="text-xl font-semibold text-primary mb-2">Le nom "<span class="text-accent">Les 6D’clics</span>"</h3>
                     
                     <p>
-                        Ce nom est né d’une réflexion autour du sens et de l’impact que je souhaite donner à mon accompagnement numérique.
+                        Ce nom est né du sens et de l’impact que je souhaite donner à mon accompagnement numérique.
                     </p>
 
                     <p class="mt-4">
@@ -308,7 +308,7 @@ TODO
     TODO
     - Lien vers CV
     --}}
-    <section id="parcours" class="py-6 md:py-8 bg-white">
+    <section id="parcours" class="scroll-mt-24 py-6 md:py-8 bg-white">
         <div class="max-w-4xl mx-auto px-6">
             <h2 class="text-3xl font-bold text-center mb-12">Mon parcours</h2>
             <ol class="relative border-s-4 border-primary">
@@ -316,7 +316,7 @@ TODO
                 <li class="timeline-group">
                     <div data-sr class="timeline-point"></div>
                     <div data-sr class="timeline-card">
-                    <h3 class="timeline-titre">2025 – Création de mon activité indépendante</h3>
+                    <h3 class="timeline-titre">2025 : Création de mon activité, Les 6D'clics</h3>
                     <p class="timeline-desc">
                         Je fonde mon entreprise de services numériques à Rennes : aide informatique pour les particuliers, création et maintenance de sites web, mission technique sur mesure.
                     </p>
@@ -324,19 +324,21 @@ TODO
                 </li>
 
                 <li class="timeline-group">
-                    <div data-sr class="timeline-point"></div>
+                    <div data-sr class="timeline-point timeline-point-experience"></div>
                     <div data-sr class="timeline-card">
-                    <h3 class="timeline-titre">2022 – Thales Services Numériques</h3>
+                    <h3 class="timeline-titre">2022 – 2025 : Thales Services Numériques</h3>
                     <p class="timeline-desc">
-                        Je rejoins Thales Services Numériques comme développeur, où je travaille sur des outils métiers internes et des solutions logicielles dans un environnement exigeant.
+                        Je rejoins Thales Services Numériques comme développeur, où je travaille sur des outils métiers internes et des solutions logicielles dans un environnement exigeant et confidentiel.
                     </p>
                     </div>
                 </li>
 
                 <li class="timeline-group">
-                    <div data-sr class="timeline-point"></div>
+                    <div data-sr class="timeline-point timeline-point-diploma">
+                        <x-heroicon-o-academic-cap class="w-4 h-4 text-accent" />
+                    </div>
                     <div data-sr class="timeline-card">
-                    <h3 class="timeline-titre">2022 – Obtention du Master MS2D</h3>
+                    <h3 class="timeline-titre">2022 : Obtention du Master MS2D</h3>
                     <p class="timeline-desc">
                         Je valide le titre de niveau 7 "Manager de solutions digitales et data" à l’ENI École Informatique, avec une spécialisation dans le développement web et la gestion de projets numériques.
                     </p>
@@ -346,7 +348,7 @@ TODO
                 <li class="timeline-group">
                     <div data-sr class="timeline-point"></div>
                     <div data-sr class="timeline-card">
-                    <h3 class="timeline-titre">2020 – Alternance au sein du groupe ISB</h3>
+                    <h3 class="timeline-titre">2020 – 2022 : Alternance au sein du groupe ISB</h3>
                     <p class="timeline-desc">
                         En parallèle de ma formation à l’ENI, j’intègre le Groupe ISB en tant que développeur web en alternance, où je conçois des outils internes pour la gestion de production et le suivi logistique.
                     </p>
@@ -354,7 +356,9 @@ TODO
                 </li>
 
                 <li class="timeline-group">
-                    <div data-sr class="timeline-point"></div>
+                    <div data-sr class="timeline-point timeline-point-diploma">
+                        <x-heroicon-o-academic-cap class="w-4 h-4 text-accent" />
+                    </div>
                     <div data-sr class="timeline-card">
                     <h3 class="timeline-titre">2019 – Obtention du Bac +2 Développement Web & Mobile</h3>
                     <p class="timeline-desc">
@@ -381,7 +385,7 @@ TODO
                     aria-label="En savoir plus sur l'accompagnement numérique"
                 >
                     <div class="flex flex-col items-center">
-                        <x-heroicon-o-question-mark-circle class="services-card-icone" aria-hidden="true" focusable="false" />
+                        <x-heroicon-o-light-bulb class="services-card-icone" aria-hidden="true" focusable="false" />
                         <h3 class="services-card-title">Accompagnement numérique</h3>
                         <p class="services-card-text">Aide et formations pédagogiques sur mesure pour vous aider à mieux utiliser les outils numériques, à votre rythme.</p>
                         <span class="services-card-btn">Commencer l'accompagnement →</span>
@@ -396,7 +400,7 @@ TODO
                     aria-label="Découvrir les offres de création de site"
                 >
                     <div class="flex flex-col items-center">
-                        <x-heroicon-o-window class="services-card-icone" aria-hidden="true" focusable="false" />
+                        <x-heroicon-o-globe-alt class="services-card-icone" aria-hidden="true" focusable="false" />
                         <h3 class="services-card-title">Création de site</h3>
                         <p class="services-card-text">Conception de sites web modernes, responsives et adaptés à votre image et à vos besoins, de l’idée à la mise en ligne.</p>
                         <span class="services-card-btn">Découvrir les offres →</span>

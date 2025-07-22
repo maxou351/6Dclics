@@ -9,8 +9,29 @@
                 <span class="relative z-20">Création de site web</span>
                 <span class="header-title-underline"></span>
             </h1> 
-            <p class="header-desc">Vous êtes entrepreneur, artisan, indépendant ou association et souhaitez un site web clair, élégant, rapide et facile à gérer ? Je vous accompagne dans chaque étape, du besoin à la mise en ligne.</p>
+            <p class="header-desc">
+                Maintenance, refonte ou création complète de sites web
+            </p>
+            <ul class="mt-6 flex flex-wrap justify-center gap-4 text-md text-white">
+                <li class="flex items-center gap-2">
+                    <x-heroicon-o-check class="w-5 h-5 text-accent" />
+                    Pour particuliers, associations ou indépendants
+                </li>
+                <li class="flex items-center gap-2">
+                    <x-heroicon-o-check class="w-5 h-5 text-accent" />
+                    Design responsive et accessible
+                </li>
+                <li class="flex items-center gap-2">
+                    <x-heroicon-o-check class="w-5 h-5 text-accent" />
+                    Sites modernes, clairs et faciles à gérer.
+                </li>
+                <li class="flex items-center gap-2">
+                    <x-heroicon-o-check class="w-5 h-5 text-accent" />
+                    Conseils et accompagnement sur mesure
+                </li>
+            </ul>
         </div>
+        <x-heroicon-o-globe-alt class="absolute top-20 right-8 w-28 h-28 text-accent opacity-50 hidden md:block" />
     </section>
 @endsection
 

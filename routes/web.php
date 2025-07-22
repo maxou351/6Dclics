@@ -17,6 +17,7 @@ Route::get('/accompagnement', fn () => view('accompagnement'))->name('accompagne
 Route::get('/creation-site', fn () => view('creation-site'))->name('creation-site');
 Route::get('/profil-tech', fn () => view('profil-tech'))->name('profil-tech');
 Route::get('/contact', fn () => view('contact'))->name('contact');
+Route::get('/tarifs', fn () => view('tarifs'))->name('tarifs');
 Route::get('/lexique', fn () => view('lexique'))->name('lexique');
 
 Route::get('/confidentialite', fn () => view('confidentialite'))->name('confidentialite');

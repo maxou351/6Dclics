@@ -102,3 +102,18 @@ Galerie multi-images avec miniatures	Possible amélioration future
             Vous êtes recruteur ou porteur de projet et vous cherchez un développeur fiable et expérimenté ?
             {{-- Découvrez mes compétences techniques, mes projets et mon profil complet. --}}
         </p>
+
+
+                   <details class="mt-4 text-primary text-sm bg-primary/5 border border-primary/10 p-4 rounded-lg">
+    <summary class="font-semibold cursor-pointer select-none list-none">
+        Tarifs <span class="text-xs text-gray-500">(cliquez pour en savoir plus)</span>
+    </summary>
+    <div class="mt-2 space-y-2">
+        <p><strong>1<sup>re</sup> intervention :</strong> 35€ / heure</p>
+        <p><strong>Formule accompagnement régulier :</strong> 30€ / heure (à partir de 5 séances)</p>
+        <p><strong>Devis gratuit</strong> en fonction de la situation</p>
+        <p class="text-xs text-gray-600">
+            Le tarif comprend la préparation, l’accompagnement personnalisé et un suivi si besoin. Aucun engagement n’est requis.
+        </p>
+    </div>
+</details>

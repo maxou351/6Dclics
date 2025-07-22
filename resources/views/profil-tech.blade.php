@@ -5,11 +5,32 @@
     <section class="header-pages-section">
         <div class="header-container">
             <h1 class="header-title">
-                <span class="relative z-20">Mon profil technique</span>
+                <span class="relative z-20">Missions techniques</span>
                 <span class="header-title-underline"></span>
             </h1> 
-            <p class="header-desc">Expérience, compétences, méthodologies : tout ce qu’il faut savoir si vous êtes développeur ou recruteur.</p>
+            <p class="header-desc">
+                Développement web, scripts, automatisation.
+            </p>
+            <ul class="mt-6 flex flex-wrap justify-center gap-4 text-md text-white">
+                <li class="flex items-center gap-2">
+                    <x-heroicon-o-check class="w-5 h-5 text-accent" />
+                    Backend/API, intégration, base de données
+                </li>
+                <li class="flex items-center gap-2">
+                    <x-heroicon-o-check class="w-5 h-5 text-accent" />
+                    Scripts, outils, automatisation (Ansible, etc.)
+                </li>
+                <li class="flex items-center gap-2">
+                    <x-heroicon-o-check class="w-5 h-5 text-accent" />
+                    Mise en production et maintenance légère
+                </li>
+                <li class="flex items-center gap-2">
+                    <x-heroicon-o-check class="w-5 h-5 text-accent" />
+                    Approche propre, sécurisée, documentée
+                </li>
+            </ul>
         </div>
+        <x-heroicon-o-code-bracket class="absolute top-20 right-8 w-28 h-28 text-accent opacity-50 hidden md:block" />
     </section>
 @endsection
 

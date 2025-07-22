@@ -88,7 +88,20 @@
       opacity: 0;
     }
   }
+
+  /* Pulse for bade (in accompagnement intro at least) */
+  @keyframes pulse-soft {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.05); opacity: 0.85; }
+  }
+
+  .animate-pulse-soft {
+    animation: pulse-soft 3s ease-in-out infinite;
+  }
+
 }
+
+
 
 /* MAYBE USED SOMEWHERE
 Rotation statique d’un élément */

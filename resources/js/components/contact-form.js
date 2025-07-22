@@ -8,3 +8,11 @@
     //         default: return '-- Choisir une option --';
     //     }
     // }
+
+    const params = new URLSearchParams(window.location.search);
+    const from = params.get('from');
+
+    if (from) {
+    console.log("L'utilisateur vient de :", from);
+    // Exemple : document.querySelector('#form-reason').value = from;
+    }   

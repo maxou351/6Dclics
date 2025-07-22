@@ -15,6 +15,10 @@ body {
   line-height: 1.6;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* === PRÉSENTATION === */
 .section-pres {
   @apply bg-white py-12;
@@ -52,6 +56,10 @@ body {
       @apply p-4 rounded-xl shadow-inner text-center grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm font-semibold ;
     }
 
+    .barre-icone-5 {
+      @apply p-4 rounded-xl shadow-inner text-center grid grid-cols-1 sm:grid-cols-5 gap-4 text-sm font-semibold ;
+    }
+
 /* === BLOCKS === */
 .bloc-txt{
   @apply space-y-6 max-w-3xl mx-auto text-primary leading-relaxed;
@@ -79,7 +87,15 @@ body {
 }
 
 .timeline-point {
-  @apply absolute w-6 h-6 bg-accent rounded-full mt-10 -start-3.5 border-4 border-white ;
+  @apply absolute w-6 h-6 bg-accent rounded-full mt-10 -start-3.5 border-4 border-white;
+}
+
+.timeline-point-diploma {
+  @apply bg-white border-accent flex items-center justify-center;
+}
+
+.timeline-point-experience {
+  @apply bg-accent;
 }
 
 .timeline-card {

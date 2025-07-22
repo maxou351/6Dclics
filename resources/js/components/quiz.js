@@ -44,9 +44,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     startQuizBtn?.addEventListener('click', () => {
         firstStep.classList.remove('hidden');
-        console.log("click")
-        console.log(firstStep)
-        console.log(firstStep.classList)
         firstStep.scrollIntoView({ behavior: 'smooth' });
     });
 });
