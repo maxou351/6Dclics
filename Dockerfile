@@ -10,6 +10,7 @@ RUN apt-get update && apt-get install -y \
     libpng-dev \
     libonig-dev \
     libxml2-dev \
+    libsqlite3-dev \
     sqlite3 \
     && docker-php-ext-install pdo pdo_sqlite zip
 
@@ -23,15 +24,15 @@ COPY . .
 # Installer les dépendances PHP
 RUN composer install --no-dev --optimize-autoloader
 
-# Compiler les assets (optionnel, si tu as un build JS/Vue)
+# Compiler les assets JS/Vue si nécessaires
 RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash - \
     && apt-get install -y nodejs \
     && npm install && npm run build
 
-# Générer cache Laravel
+# Cache Laravel
 RUN php artisan config:cache
 
-# Port
+# Port d'écoute
 EXPOSE 8080
 
 # Commande de démarrage
