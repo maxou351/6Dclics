@@ -494,7 +494,7 @@ TODO
 
                 <!-- Contenu -->
                 <p class="text-sm text-primary pr-4">Besoin d’aide pour vous orienter ?</p>
-                <button class="bg-primary text-white text-sm font-medium py-2 rounded-lg hover:bg-primary-dark transition cursor-pointer">
+                <button id="start-quiz-btn-2" class="bg-primary text-white text-sm font-medium py-2 rounded-lg hover:bg-primary-dark transition cursor-pointer">
                     Faire le questionnaire
                 </button>
                 <a href="{{ url('/contact') }}" class="text-sm text-primary underline text-center">Me contacter</a>

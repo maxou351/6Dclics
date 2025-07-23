@@ -6,12 +6,12 @@
 
         @foreach ($questions as $index => $question)
 
-            <div id="quiz-step-{{ $index + 1 }}" class="component-quiz__step {{ $index > 0 ? 'hidden' : '' }}" data-step="{{ $index + 1 }}">
+            <div id="quiz-step-{{ $index + 1 }}" class="component-quiz__step {{ $index > 0 ? 'hidden' : '' }}" data-step="{{ $index + 1 }} scroll-mt-24">
                 
                 @if ($index > 0)
                     <div id="previous-answer-{{ $index + 1 }}" class="component-quiz__previous-answer mb-4 text-sm text-gray-600 italic"></div>
                 @endif
-                
+
                 <p class="component-quiz__question">{{ $question['text'] }}</p>
                 <div class="component-quiz__answers">
                     @foreach ($question['answers'] as $value => $label)
@@ -24,6 +24,13 @@
                         </button>
                     @endforeach
                 </div>
+
+                @if ($index > 0)
+                    <button type="button" class="component-quiz__btn-return mt-6 inline-flex items-center gap-2 px-4 py-2 bg-white text-primary border border-primary rounded-lg hover:bg-primary hover:text-white transition-colors">
+                        <x-heroicon-o-arrow-left class="w-4 h-4" />
+                        Retour
+                    </button>
+                @endif
             </div>
         @endforeach
     </div>
