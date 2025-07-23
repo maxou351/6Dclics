@@ -25,7 +25,7 @@ TODO
                 <span class="header-title-underline"></span>
             </h1> 
             <p class="header-desc">
-                Développeur web indépendant — accompagnement informatique, sites sur mesure & missions techniques
+                Entreprise d'accompagnement informatique, création de sites sur mesure & réalisation de missions techniques.
             </p>
 
             {{-- Carroussel sur Mobile --}}
@@ -96,13 +96,13 @@ TODO
                     <p>
                         Je suis Max MORELLI, développeur web freelance, basé à Rennes.  
                         Après cinq ans d'expérience en entreprise dans le développement web et logiciel, 
-                        j’ai eu la chance de travailler sur des projets variés, parfois complexes, souvent ambitieux.
+                        j’ai eu la chance de travailler sur des projets variés, parfois complexes.
                         <a href="#parcours" class="button-text">
                             Voir mon parcours
                             <x-heroicon-o-arrow-right class="button-text-icone animate-pulse" />
                         </a>
                         <br>
-                        Depuis 2025, je me suis lancé dans la grande aventure de l'entrepreunariat pour pouvoir, à mon tour, 
+                        Depuis 2025, je me suis lancé dans l'aventure de l'entrepreunariat pour pouvoir vous
                         apporter ma vision et mon expérience dans le monde de l'informatique.
                        
                     </p>
@@ -118,7 +118,7 @@ TODO
             </div>
 
             {{-- Barre d'infos --}} 
-            <div class="barre-icone bg-light text-primary">
+            <div class="barre-icone bg-primary/80 text-white">
                 <div class="icone-pres flex items-center justify-center gap-2">
                     <x-heroicon-o-calendar class="w-5 h-5 text-accent" />
                     <span>25 ans</span>
@@ -136,8 +136,8 @@ TODO
             {{-- Sens, déclic, réflexion --}}
             <div class="bloc-txt">
                 <p>
-                    Au fil du temps, les gros projets auxquels j'ai pu prendre part perdaient parfois de leur sens.  
-                    J'avais besoin de retrouver du concret et de l’humain dans mon travail.
+                    Avec les années, j’ai eu envie de retrouver plus de concret, de proximité et de variété dans mon quotidien.  
+                    J’aime comprendre les vrais besoins, voir l’impact direct de mon travail, et pouvoir aider de manière simple et efficace.
                 </p>
                 <div class="bloc-info">
                     💡 Depuis quelque temps, l’idée de me lancer à mon compte me trottait dans la tête...
@@ -147,18 +147,19 @@ TODO
             {{-- Déclic: bloc texte + photo --}}
             <div class="bloc-duo">
                 <div class="txt-bloc-duo">
+                    <h2 class="text-3xl font-bold text-primary mb-4">Le Déclic</h2>
                     <p>
                         Par une belle journée, ma grand-mère m'appelle en panique suite à un souci informatique.  
-                        Tout en la guidant pas à pas, le déclic me vient :
+                        Tout en la guidant pas à pas, j’ai réalisé à quel point j’aimais rendre la technologie plus claire et plus utile pour les autres.  
+                        C’est ce mélange d’écoute, d’analyse et de solution concrète qui m’anime.
                     </p>
 
                     <blockquote class="bloc-quote">
-                        <strong>C'est exactement ce que je veux faire au quotidien.</strong>
+                        <strong>Créer, expliquer, résoudre. C’est ça que je veux faire au quotidien.</strong>
                     </blockquote>
 
                     <p>
-                        Utiliser mes connaissances pour aider, transmettre, rendre l’informatique plus accessible.  
-                        Pas juste coder, mais comprendre, simplifier et accompagner.
+                        Et ainsi, mettre mes connaissances au service de projets concrets : création de sites web, développement d’outils adaptés, accompagnement numérique. 
                     </p>
                 </div>
                 <div class="div-img-bloc-duo">
@@ -178,7 +179,7 @@ TODO
                 </p>
 
                 <blockquote class="bloc-quote">
-                    <strong>Permettre à tous d'apprivoiser le numérique et d'en tirer le meilleur parti</strong>.
+                    <strong>Permettre à tous de mieux maîtriser le numérique et d'en tirer le meilleur parti</strong>.
                 </blockquote>
 
                 <p>
@@ -192,9 +193,9 @@ TODO
             <div x-data="{ showInfo: false }" class="mt-8">
                 <button 
                     @@click="showInfo = !showInfo"
-                    class="flex items-center gap-2 mt-6 text-primary font-semibold hover:underline focus:outline-none"
+                    class="flex items-center gap-2 mt-6 text-primary font-semibold hover:underline focus:outline-none cursor-pointer"
                 >
-                    <span>En savoir plus sur le nom de la marque</span>
+                    <span>Cliquez pour en savoir plus sur le nom de la marque</span>
                     <span 
                         :class="{ 'rotate-180': showInfo }" 
                         class="transition-transform transform duration-300"
@@ -328,7 +329,7 @@ TODO
                     <div data-sr class="timeline-card">
                     <h3 class="timeline-titre">2022 – 2025 : Thales Services Numériques</h3>
                     <p class="timeline-desc">
-                        Je rejoins Thales Services Numériques comme développeur, où je travaille sur des outils métiers internes et des solutions logicielles dans un environnement exigeant et confidentiel.
+                        Je rejoins Thales Services Numériques comme développeur, où je travaille sur des outils métiers internes et des solutions logicielles dans des environnements exigeants et confidentiels.
                     </p>
                     </div>
                 </li>
