@@ -33,6 +33,10 @@ class AppServiceProvider extends ServiceProvider
             URL::forceScheme('https');
         }
 
+        if (app()->environment('local') && str_contains(request()->getHost(), 'onrender')) {
+            URL::forceScheme('https');
+        }
+
         Blade::directive('navactive', function ($routeName) {
             return "<?php echo request()->routeIs($routeName) ? 'active' : ''; ?>";
         });
