@@ -7,7 +7,7 @@
 @import './components/global.css';
 @import './components/quiz.css';
 @import './components/testPages.css';  
-
+@import './components/accompagnement.css'; 
  
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';

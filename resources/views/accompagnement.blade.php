@@ -2,48 +2,57 @@
 
 @section('title', 'Accompagnement informatique')
 
+{{-- Header --}}
 @section('header')
-    <section class="header-pages-section">
+    <section class="relative header-pages-section">
         <div class="header-container">
-            <h1 class="header-title">
-                <span class="relative z-20">Accompagnement informatique</span>
-                <span class="header-title-underline"></span>
-            </h1> 
-            <p class="header-desc">
-                Formation, dépannage, assistance.
-            </p>
-            <ul class="mt-6 flex flex-wrap justify-center gap-4 text-md text-white">
-                <li class="flex items-center gap-2">
-                    <x-heroicon-o-check class="w-5 h-5 text-accent" />
+            <div class="relative inline-block">
+                <h1 class="header-title">
+                    <span class="relative z-20">Accompagnement informatique</span>
+                    <span aria-hidden="true"
+                        class="header-title-underline"></span>
+                </h1>
+            </div>
+            <p class="header-desc">Formation, dépannage, assistance.</p>
+
+            <ul class="header-list">
+                <li class="header-list-item">
+                    <x-heroicon-o-check class="header-list-item-icone" />
                     À domicile ou à distance
                 </li>
-                <li class="flex items-center gap-2">
-                    <x-heroicon-o-check class="w-5 h-5 text-accent" />
+                <li class="header-list-item">
+                    <x-heroicon-o-check class="header-list-item-icone" />
                     Pédagogie adaptée à votre rythme
                 </li>
-                <li class="flex items-center gap-2">
-                    <x-heroicon-o-check class="w-5 h-5 text-accent" />
+                <li class="header-list-item">
+                    <x-heroicon-o-check class="header-list-item-icone" />
                     Pour tous les profils
                 </li>
-                <li class="flex items-center gap-2">
-                    <x-heroicon-o-check class="w-5 h-5 text-accent" />
+                <li class="header-list-item">
+                    <x-heroicon-o-check class="header-list-item-icone" />
                     Sur tous vos appareils
                 </li>
             </ul>
         </div>
-        <x-heroicon-o-light-bulb class="absolute top-20 right-8 w-28 h-28 text-accent opacity-50 hidden md:block" />
+
+        <!-- Ampoule décorative -->
+        <x-heroicon-o-light-bulb 
+            class="header-bg-icone" 
+            aria-hidden="true" />
     </section>
 @endsection
 
 {{--
 TODO
-- Gestion quizz
 - mobile
 - css
-- précision sur les niveau, débutant peut-être un peu a=busé ?
+- précision sur les niveau, débutant peut-être un peu abusé ?
     Explication d'outils, WhatsApp
     transferer les imagesd, sauvegarder 
+-affichage de la modale trop tôt sur tel
  --}}
+
+
 @section('content')
     {{-- Barre d'infos --}}
     {{-- <div class="barre-icone-5 bg-light text-primary">
@@ -71,52 +80,56 @@ TODO
 
     {{-- Intro --}}
     <section id="introduction" class="py-12 px-6 max-w-4xl mx-auto text-center">
-        <h2 class="text-3xl font-bold primary mb-4">Un accompagnement humain et personnalisé</h2>
-        <p class="text-center text-lg primary mb-6">
+        <h2 class="intro-title">Un accompagnement humain et personnalisé</h2>
+        <p class="intro-desc">
             Que vous soyez débutant, curieux ou déjà à l'aise avec le numérique, je vous propose un accompagnement ou dépannage adapté à votre niveau, vos besoins, et votre matériel. 
         </p>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-base text-primary">
+        <div class="intro-grid">
             <!-- Bloc questionnaire -->
-            <div class="bg-white p-6 rounded-2xl border border-primary/20 shadow-sm flex flex-col justify-between transition transform hover:-translate-y-1 hover:shadow-md">
+            <div 
+              class="intro-card"
+              onclick="document.getElementById('start-quiz-btn').click()">
                 <div>
-                    <h3 class="text-xl font-semibold mb-2">Vous voulez aller droit au but&nbsp;?</h3>
-                    <p class="mb-3 leading-relaxed">
+                    <h3 class="intro-card-title">Vous voulez aller droit au but&nbsp;?</h3>
+                    <p class="intro-card-text">
                         Répondez à <strong>2 questions</strong> pour être guidé vers la section qui vous concerne :
                         type d’accompagnement, <strong>tarifs</strong>, modalités, tout est ciblé selon votre besoin.
                     </p>
-                    <span class="inline-block bg-accent text-sm text-black font-medium px-3 py-1 rounded-full mb-4 animate-pulse-soft">
+                    <span class="intro-card-badge bg-accent cursor-default opacity-90 animate-pulse-soft">
                         💡 Conseillé si vous savez ce que vous cherchez
                     </span>
                 </div>
                 <button
                     id="start-quiz-btn"
-                    class="inline-block w-fit bg-primary text-white px-5 py-3 rounded-xl font-medium shadow hover:bg-primary/90 transition cursor-pointer"
+                    class="intro-btn"
                 >
                     🎯 Je lance le questionnaire
                 </button>
             </div>
 
             <!-- Bloc navigation libre -->
-            <div class="bg-white p-6 rounded-2xl border border-primary/20 shadow-sm flex flex-col justify-between transition transform hover:-translate-y-1 hover:shadow-md">
+            <div 
+              class="intro-card"
+              onclick="window.location.href='#services'">
                 <div>
-                    <h3 class="text-xl font-semibold mb-2">Vous préférez explorer par vous-même&nbsp;?</h3>
-                    <p class="mb-3 leading-relaxed">
+                    <h3 class="intro-card-title">Vous préférez explorer par vous-même&nbsp;?</h3>
+                    <p class="intro-card-text">
                         Parcourez la page à votre rythme, sans passer par le questionnaire. Vous y trouverez toutes les informations.
                     </p>
-                    <span class="inline-block bg-muted text-sm text-gray-700 px-3 py-1 rounded-full mb-4">
+                    <span class="intro-card-badge">
                         👀 Vue d’ensemble complète
                     </span>
                 </div>
                 <a
                     href="#services"
-                    class="inline-block w-fit bg-primary text-white px-5 py-3 rounded-xl font-medium shadow hover:bg-primary/90 transition"
+                    class="intro-link"
+                    role="button"
                 >
                     🧭 Je préfère explorer la page
                 </a>
             </div>
         </div>
-
     </section>
 
     {{-- Questionnaire --}}
@@ -207,45 +220,45 @@ TODO
 {{-- Partie statique --}}
 
     {{-- Services --}}
-    <section id="services" class="scroll-mt-24 py-10 px-6 max-w-6xl mx-auto border-t border-accent mt-8">
-        <h2 id="levels-heading" class="text-3xl font-bold text-center text-primary mb-12">
+    <section id="services" class="scroll-mt-24 section-component">
+        <h2 id="levels-heading" class="section-titre">
             Je propose des services adaptés à vos besoins
         </h2>
-        <div class="grid gap-6 md:grid-cols-2">
+        <div class="section-grid2x2" role="list">
 
             <!-- Formation courte -->
-            <div class="bg-white p-6 rounded-xl shadow flex items-start space-x-4">
-                <x-heroicon-o-clock class="w-10 h-10 text-accent flex-shrink-0" />
+            <div class="acc-services-container" role="listitem">
+                <x-heroicon-o-clock class="services-container-icone"/>
                 <div>
-                    <h3 class="font-semibold text-lg mb-1">Formation courte</h3>
-                    <p class="text-primary">Apprendre à maîtriser un outil ou une fonctionnalité en une ou deux sessions.</p>
+                    <h3 class="section-container-titre ">Formation courte</h3>
+                    <p>Apprendre à maîtriser un outil ou une fonctionnalité en une ou deux sessions.</p>
                 </div>
             </div>
 
             <!-- Formation suivie -->
-            <div class="bg-white p-6 rounded-xl shadow flex items-start space-x-4">
-                <x-heroicon-o-academic-cap class="w-10 h-10 text-accent flex-shrink-0" />
+            <div class="acc-services-container" role="listitem">
+                <x-heroicon-o-academic-cap class="services-container-icone" />
                 <div>
-                    <h3 class="font-semibold text-lg mb-1">Formation suivie</h3>
-                    <p class="text-primary">Un accompagnement régulier sur plusieurs semaines pour gagner en autonomie.</p>
+                    <h3 class="services-container-titre">Formation suivie</h3>
+                    <p>Un accompagnement régulier sur plusieurs semaines pour gagner en autonomie.</p>
                 </div>
             </div>
 
             <!-- Dépannage ponctuel -->
-            <div class="bg-white p-6 rounded-xl shadow flex items-start space-x-4">
-                <x-heroicon-o-wrench-screwdriver class="w-10 h-10 text-accent flex-shrink-0" />
+            <div class="acc-services-container" role="listitem">
+                <x-heroicon-o-wrench-screwdriver class="services-container-icone" />
                 <div>
-                    <h3 class="font-semibold text-lg mb-1">Dépannage ponctuel</h3>
-                    <p class="text-primary">Une aide rapide pour résoudre un blocage ou un dysfonctionnement.</p>
+                    <h3 class="services-container-titre">Dépannage ponctuel</h3>
+                    <p>Une aide rapide pour résoudre un blocage ou un dysfonctionnement.</p>
                 </div>
             </div>
 
             <!-- Initialisation -->
-            <div class="bg-white p-6 rounded-xl shadow flex items-start space-x-4">
-                <x-heroicon-o-arrow-path class="w-10 h-10 text-accent flex-shrink-0" />
+            <div class="acc-services-container" role="listitem">
+                <x-heroicon-o-arrow-path class="services-container-icone" />
                 <div>
-                    <h3 class="font-semibold text-lg mb-1">Aide au démarrage</h3>
-                    <p class="text-primary">Installation, initialisation et paramétrage d'outils ou appareils</p>
+                    <h3 class="services-container-titre">Aide au démarrage</h3>
+                    <p>Installation, initialisation et paramétrage d'outils ou appareils</p>
                 </div>
             </div>
         </div>
@@ -255,102 +268,102 @@ TODO
     TODO
     - carroussel on mobile
     --}}
-    <section id="levels" class="py-10 px-6 max-w-6xl mx-auto border-t border-accent mt-8">
-        <h2 id="levels-heading" class="text-3xl font-bold text-center text-primary mb-12">
+    <section id="levels" class="section-component">
+        <h2 id="levels-heading" class="section-titre">
             Je m'adapte à tous les niveaux
         </h2>
 
-        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div class="section-grid3x1" role="list">
 
             <!-- Débutant -->
-            <div class="bg-white rounded-2xl shadow-md p-6 flex flex-col items-center text-center hover:shadow-lg transition transform hover:-translate-y-1 duration-300">
-                <div class="flex justify-center gap-1 mb-4" aria-hidden="true" focusable="false">
-                    <x-heroicon-o-academic-cap class="w-12 h-12 text-primary" />
+            <div role="list-item" class="levels-container">
+                <div class="levels-container-div-icone" aria-hidden="true" focusable="false">
+                    <x-heroicon-o-academic-cap class="levels-container-icone"/>
                 </div>
-                <h3 class="text-xl font-semibold mb-2">Vous débutez ou vous êtes peu à l’aise</h3>
-                <p class="text-primary mb-4">
+                <h3 class="levels-container-titre">Vous débutez ou vous êtes peu à l’aise</h3>
+                <p class="mb-4">
                     Pas de panique ! Je vous accompagne avec patience et pédagogie. On peut par exemple apprendre ensemble à :
                 </p>
-                <ul class="space-y-3 text-left w-full">
-                    <li class="flex items-start space-x-3">
-                        <x-heroicon-o-check-circle class="w-5 h-5 mt-1 text-accent flex-shrink-0" />
+                <ul class="levels-liste ">
+                    <li class="levels-liste-item">
+                        <x-heroicon-o-check-circle class="levels-liste-icone" />
                         <span>Envoyer un e-mail ou une photo</span>
                     </li>
-                    <li class="flex items-start space-x-3">
-                        <x-heroicon-o-check-circle class="w-5 h-5 mt-1 text-accent flex-shrink-0" />
+                    <li class="levels-liste-item">
+                        <x-heroicon-o-check-circle class="levels-liste-icone" />
                         <span>Installer une imprimante ou un nouveau téléphone</span>
                     </li>
-                    <li class="flex items-start space-x-3">
-                        <x-heroicon-o-check-circle class="w-5 h-5 mt-1 text-accent flex-shrink-0" />
+                    <li class="levels-liste-item">
+                        <x-heroicon-o-check-circle class="levels-liste-icone" />
                         <span>Faire une demande sur un site comme la <strong>CAF</strong> ou <strong>Ameli</strong></span>
                     </li>
-                    <li class="flex items-start space-x-3">
-                        <x-heroicon-o-check-circle class="w-5 h-5 mt-1 text-accent flex-shrink-0" />
+                    <li class="levels-liste-item">
+                        <x-heroicon-o-check-circle class="levels-liste-icone" />
                         <span>Retrouver un mot de passe ou sécuriser vos comptes</span>
                     </li>
-                    <li class="flex items-start space-x-3">
-                        <x-heroicon-o-check-circle class="w-5 h-5 mt-1 text-accent flex-shrink-0" />
+                    <li class="levels-liste-item">
+                        <x-heroicon-o-check-circle class="levels-liste-icone" />
                         <span>... Et bien d'autres situations !</span>
                     </li>
                 </ul>
             </div>
 
             <!-- Intermédiaire -->
-            <div class="bg-white rounded-2xl shadow-md p-6 flex flex-col items-center text-center hover:shadow-lg transition transform hover:-translate-y-1 duration-300">
-                <div class="flex justify-center gap-1 mb-4" aria-hidden="true" focusable="false">
-                    <x-heroicon-o-academic-cap class="w-12 h-12 text-primary" />
-                    <x-heroicon-o-academic-cap class="w-12 h-12 text-primary" />
+            <div role="list-item" class="levels-container">
+                <div class="levels-container-div-icone" aria-hidden="true" focusable="false">
+                    <x-heroicon-o-academic-cap class="levels-container-icone" />
+                    <x-heroicon-o-academic-cap class="levels-container-icone" />
                 </div>
-                <h3 class="text-xl font-semibold mb-2">Vous êtes à l’aise mais avez un besoin ponctuel</h3>
-                <p class="text-primary mb-4">
+                <h3 class="levels-container-titre">Vous êtes à l’aise mais avez un besoin ponctuel</h3>
+                <p class="mb-4">
                     Je vous propose une assistance rapide et ciblée pour, par exemple :
                 </p>
-                <ul class="space-y-3 text-left w-full">
-                    <li class="flex items-start space-x-3">
-                        <x-heroicon-o-check-circle class="w-5 h-5 mt-1 text-accent flex-shrink-0" />
+                <ul class="levels-liste">
+                    <li class="levels-liste-item">
+                        <x-heroicon-o-check-circle class="levels-liste-icone" />
                         <span>Optimiser votre PC ou gérer vos sauvegardes</span>
                     </li>
-                    <li class="flex items-start space-x-3">
-                        <x-heroicon-o-check-circle class="w-5 h-5 mt-1 text-accent flex-shrink-0" />
+                    <li class="levels-liste-item">
+                        <x-heroicon-o-check-circle class="levels-liste-icone" />
                         <span>Comprendre un logiciel ou un outil en particulier</span>
                     </li>
-                    <li class="flex items-start space-x-3">
-                        <x-heroicon-o-check-circle class="w-5 h-5 mt-1 text-accent flex-shrink-0" />
+                    <li class="levels-liste-item">
+                        <x-heroicon-o-check-circle class="levels-liste-icone" />
                         <span>Créer un espace de stockage (Google Drive, Dropbox…)</span>
                     </li>
-                    <li class="flex items-start space-x-3">
-                        <x-heroicon-o-check-circle class="w-5 h-5 mt-1 text-accent flex-shrink-0" />
+                    <li class="levels-liste-item">
+                        <x-heroicon-o-check-circle class="levels-liste-icone" />
                         <span>Et plus encore selon vos besoin !</span>
                     </li>
                 </ul>
             </div>
 
             <!-- Autonome -->
-            <div class="bg-white rounded-2xl shadow-md p-6 flex flex-col items-center text-center hover:shadow-lg transition transform hover:-translate-y-1 duration-300">
-                <div class="flex justify-center gap-1 mb-4" aria-hidden="true" focusable="false">
-                    <x-heroicon-o-academic-cap class="w-12 h-12 text-primary" />
-                    <x-heroicon-o-academic-cap class="w-12 h-12 text-primary" />
-                    <x-heroicon-o-academic-cap class="w-12 h-12 text-primary" />
+            <div role="list-item" class="levels-container">
+                <div class="levels-container-div-icone" aria-hidden="true" focusable="false">
+                    <x-heroicon-o-academic-cap class="levels-container-icone" />
+                    <x-heroicon-o-academic-cap class="levels-container-icone" />
+                    <x-heroicon-o-academic-cap class="levels-container-icone" />
                 </div>
-                <h3 class="text-xl font-semibold mb-2">Vous avez un besoin plus technique</h3>
-                <p class="text-primary mb-4">
+                <h3 class="levels-container-titre">Vous avez un besoin plus technique</h3>
+                <p class="mb-4">
                     Voici par exemple ce que je peux vous proposer :
                 </p>
-                <ul class="space-y-3 text-left w-full">
-                    <li class="flex items-start space-x-3">
-                        <x-heroicon-o-check-circle class="w-5 h-5 mt-1 text-accent flex-shrink-0" />
+                <ul class="levels-liste">
+                    <li class="levels-liste-item">
+                        <x-heroicon-o-check-circle class="levels-liste-icone" />
                         <span>Initiation à la programmation ou à Linux</span>
                     </li>
-                    <li class="flex items-start space-x-3">
-                        <x-heroicon-o-check-circle class="w-5 h-5 mt-1 text-accent flex-shrink-0" />
+                    <li class="levels-liste-item">
+                        <x-heroicon-o-check-circle class="levels-liste-icone" />
                         <span>Installation de CMS (WordPress, Joomla…)</span>
                     </li>
-                    <li class="flex items-start space-x-3">
-                        <x-heroicon-o-check-circle class="w-5 h-5 mt-1 text-accent flex-shrink-0" />
+                    <li class="levels-liste-item">
+                        <x-heroicon-o-check-circle class="levels-liste-icone" />
                         <span>Conseils en sécurité, matériel ou outils</span>
                     </li>
-                    <li class="flex items-start space-x-3">
-                        <x-heroicon-o-check-circle class="w-5 h-5 mt-1 text-accent flex-shrink-0" />
+                    <li class="levels-liste-item">
+                        <x-heroicon-o-check-circle class="levels-liste-icone" />
                         <span>Ou tout autre demande que vous auriez en tête !</span>
                     </li>
                 </ul>
@@ -358,15 +371,20 @@ TODO
         </div>
     </section>
 
+    {{-- Carroussel sur Mobile --}}
+    {{-- <div class="block md:hidden mt-8 overflow-hidden relative">
+        @include('partials.carousel-services')
+    </div> --}}
+
     {{-- Supports et modalités --}}
-    <section id="supports-et-modalites" class="py-10 px-6 max-w-6xl mx-auto border-t border-accent mt-8">
-        <h2 class="text-3xl font-bold text-center text-primary mb-12">Supports et modalités</h2>
-        <div class="grid md:grid-cols-2 gap-6">
+    <section id="supports-et-modalites" class="section-component">
+        <h2 class="section-titre">Supports et modalités</h2>
+        <div class="section-grid2x2">
             <!-- Appareils -->
-            <div class="bg-white p-6 rounded-xl shadow">
+            <div class="modale-container">
                 {{-- <x-heroicon-o-computer-desktop class="w-6 h-6 text-accent" /> --}}
-                <h3 class="text-2xl font-semibold mb-4">Sur quels appareils ?</h3>
-                <ul class="list-disc list-inside text-primary space-y-2">
+                <h3 class="modales-container-titre">Sur quels appareils ?</h3>
+                <ul class="modales-liste">
                     <li>Ordinateur fixe ou portable</li>
                     <li>Smartphone et tablette (Android/iPhone)</li>
                     <li>Imprimantes, box internet, télé connectée, assistant vocal, liseuse…</li>
@@ -374,10 +392,10 @@ TODO
             </div>
 
             <!-- Modalités -->
-            <div class="bg-white p-6 rounded-xl shadow">
+            <div class="modale-container">
                 {{-- <x-heroicon-o-chat-bubble-left-ellipsis class="w-6 h-6 text-accent" /> --}}
-                <h3 class="text-2xl font-semibold mb-4">Comment se passe l’accompagnement ?</h3>
-                <ul class="list-disc list-inside text-gray-800 space-y-2">
+                <h3 class="modales-container-titre">Comment se passe l’accompagnement ?</h3>
+                <ul class="modales-liste">
                     <li>À votre domicile (Rennes et alentours)</li>
                     <li>À distance (visioconférence, prise en main à distance)</li>
                     <li>Par téléphone (pour les cas simples ou en complément)</li>
@@ -386,10 +404,40 @@ TODO
         </div>
     </section>
 
-    {{-- Social proof --}}
-    <section id="services" class="py-16 px-6 max-w-6xl mx-auto border-t border-accent mt-12">
-        <h2 class="text-3xl font-bold text-center text-primary mb-12">Ils m'ont fait confiance</h2>
+    {{-- Social proof 
+    TODO 
+    - css externe
+    --}}
+    <section id="services" class="section-testimony">
+        <h2 class="section-titre">Ils m'ont fait confiance</h2>
         <div class="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+
+            <!-- Pourquoi me faire confiance -->
+            <div class="bg-white text-primary p-8 pt-2 space-y-6">
+                
+                <ul class="space-y-4">
+                    <li class="flex items-start gap-3">
+                        <x-heroicon-o-check-circle class="w-6 h-6 text-accent mt-1" />
+                        <span>Approche personnalisée, à votre rythme</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <x-heroicon-o-chat-bubble-left-right class="w-6 h-6 text-accent mt-1" />
+                        <span>Un langage clair, sans jargon</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <x-heroicon-o-document-text class="w-6 h-6 text-accent mt-1" />
+                        <span>Support écrit remis disponible</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <x-heroicon-o-device-phone-mobile class="w-6 h-6 text-accent mt-1" />
+                        <span>Formations en présentiel ou à distance</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <x-heroicon-o-cpu-chip class="w-6 h-6 text-accent mt-1" />
+                        <span>10+ ans d’expérience avec les outils numériques</span>
+                    </li>
+                </ul>
+            </div>
 
             <!-- Témoignages avec carrousel -->
             <div 
@@ -402,7 +450,11 @@ TODO
                 @keydown.arrow-right.window="active = (active + 1) % testimonials.length" 
                 @keydown.arrow-left.window="active = (active - 1 + testimonials.length) % testimonials.length"
               x-init="setInterval(() => active = (active + 1) % testimonials.length, 5000)" 
-              class="relative">
+              class="relative"
+              role="region" 
+              aria-roledescription="carousel" 
+              aria-label="Témoignages de clients"
+              aria-live="polite">
                 <template x-for="(testimonial, index) in testimonials" :key="index">
                     <div x-show="active === index" class="bg-white p-6 rounded-xl shadow border">
                         <p class="text-primary italic mb-3" x-text="`“${testimonial.text}”`"></p>
@@ -438,32 +490,7 @@ TODO
                 </div>
             </div>
 
-            <!-- Pourquoi me faire confiance -->
-            <div class="bg-white text-primary p-8 pt-2 space-y-6">
-                
-                <ul class="space-y-4">
-                    <li class="flex items-start gap-3">
-                        <x-heroicon-o-check-circle class="w-6 h-6 text-accent mt-1" />
-                        <span>Approche personnalisée, à votre rythme</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <x-heroicon-o-chat-bubble-left-right class="w-6 h-6 text-accent mt-1" />
-                        <span>Un langage clair, sans jargon</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <x-heroicon-o-document-text class="w-6 h-6 text-accent mt-1" />
-                        <span>Support écrit remis disponible</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <x-heroicon-o-device-phone-mobile class="w-6 h-6 text-accent mt-1" />
-                        <span>Formations en présentiel ou à distance</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <x-heroicon-o-cpu-chip class="w-6 h-6 text-accent mt-1" />
-                        <span>10+ ans d’expérience avec les outils numériques</span>
-                    </li>
-                </ul>
-            </div>
+
 
         </div>
     </section>

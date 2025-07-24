@@ -82,9 +82,6 @@ TODO
     - component blade bloc texte + image
     - changer/ Ajouter photos
     - explications noms revoir contenu + css
-    - "ambitieux" .... ?
-    - citation "c'est ce que je veux faire" trop axée aide et pas dév eloppement
-    - moins négatifs sur projets passés
     --}}
     <section class="section-pres">
         <div class="container-pres">

@@ -14,32 +14,105 @@
     @endphp
 
     <div id="carousel" class="carousel-container scroll-smooth flex overflow-x-auto space-x-4 snap-x snap-mandatory -mx-4 px-4">
-        <x-card-service
-            device="mobile"
-            icon="heroicon-o-question-mark-circle"
-            title="Accompagnement & formation informatique"
-            desc="Vous êtes un particulier en difficulté avec l'informatique et vous avez besoin d'aide ou de formation ?"
-            url="/accompagnement"
-            label="En savoir plus"
-        />
+         <!-- Débutant -->
+            <div 
+              role="list-item"
+              class="bg-white rounded-2xl shadow-md p-6 flex flex-col items-center text-center hover:shadow-lg transition transform hover:-translate-y-1 duration-300">
+                <div class="flex justify-center gap-1 mb-4" aria-hidden="true" focusable="false">
+                    <x-heroicon-o-academic-cap class="w-12 h-12 text-primary"/>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Vous débutez ou vous êtes peu à l’aise</h3>
+                <p class="text-primary mb-4">
+                    Pas de panique ! Je vous accompagne avec patience et pédagogie. On peut par exemple apprendre ensemble à :
+                </p>
+                <ul class="space-y-3 text-left w-full">
+                    <li class="flex items-start space-x-3">
+                        <x-heroicon-o-check-circle class="w-5 h-5 mt-1 text-accent flex-shrink-0" />
+                        <span>Envoyer un e-mail ou une photo</span>
+                    </li>
+                    <li class="flex items-start space-x-3">
+                        <x-heroicon-o-check-circle class="w-5 h-5 mt-1 text-accent flex-shrink-0" />
+                        <span>Installer une imprimante ou un nouveau téléphone</span>
+                    </li>
+                    <li class="flex items-start space-x-3">
+                        <x-heroicon-o-check-circle class="w-5 h-5 mt-1 text-accent flex-shrink-0" />
+                        <span>Faire une demande sur un site comme la <strong>CAF</strong> ou <strong>Ameli</strong></span>
+                    </li>
+                    <li class="flex items-start space-x-3">
+                        <x-heroicon-o-check-circle class="w-5 h-5 mt-1 text-accent flex-shrink-0" />
+                        <span>Retrouver un mot de passe ou sécuriser vos comptes</span>
+                    </li>
+                    <li class="flex items-start space-x-3">
+                        <x-heroicon-o-check-circle class="w-5 h-5 mt-1 text-accent flex-shrink-0" />
+                        <span>... Et bien d'autres situations !</span>
+                    </li>
+                </ul>
+            </div>
 
-        <x-card-service
-            device="mobile"
-            icon="heroicon-o-globe-alt"
-            title="Création, évolution & gestion de site web"
-            desc="Vous êtes entrepreneur, artisan ou association et vous souhaitez un site clair, moderne et facile à gérer ?"
-            url="/creation-site"
-            label="Découvrir"
-        />
+            <!-- Intermédiaire -->
+            <div 
+              role="list-item"
+              class="bg-white rounded-2xl shadow-md p-6 flex flex-col items-center text-center hover:shadow-lg transition transform hover:-translate-y-1 duration-300">
+                <div class="flex justify-center gap-1 mb-4" aria-hidden="true" focusable="false">
+                    <x-heroicon-o-academic-cap class="w-12 h-12 text-primary" />
+                    <x-heroicon-o-academic-cap class="w-12 h-12 text-primary" />
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Vous êtes à l’aise mais avez un besoin ponctuel</h3>
+                <p class="text-primary mb-4">
+                    Je vous propose une assistance rapide et ciblée pour, par exemple :
+                </p>
+                <ul class="space-y-3 text-left w-full">
+                    <li class="flex items-start space-x-3">
+                        <x-heroicon-o-check-circle class="w-5 h-5 mt-1 text-accent flex-shrink-0" />
+                        <span>Optimiser votre PC ou gérer vos sauvegardes</span>
+                    </li>
+                    <li class="flex items-start space-x-3">
+                        <x-heroicon-o-check-circle class="w-5 h-5 mt-1 text-accent flex-shrink-0" />
+                        <span>Comprendre un logiciel ou un outil en particulier</span>
+                    </li>
+                    <li class="flex items-start space-x-3">
+                        <x-heroicon-o-check-circle class="w-5 h-5 mt-1 text-accent flex-shrink-0" />
+                        <span>Créer un espace de stockage (Google Drive, Dropbox…)</span>
+                    </li>
+                    <li class="flex items-start space-x-3">
+                        <x-heroicon-o-check-circle class="w-5 h-5 mt-1 text-accent flex-shrink-0" />
+                        <span>Et plus encore selon vos besoin !</span>
+                    </li>
+                </ul>
+            </div>
 
-        <x-card-service
-            device="mobile"
-            icon="heroicon-o-wrench-screwdriver"
-            title="Développement & missions techniques"
-            desc="Vous êtes recruteur ou porteur de projet et vous cherchez un développeur fiable et expérimenté ?"
-            url="/profil-tech"
-            label="Voir le profil"
-        />
+            <!-- Autonome -->
+            <div 
+              role="list-item"
+              class="bg-white rounded-2xl shadow-md p-6 flex flex-col items-center text-center hover:shadow-lg transition transform hover:-translate-y-1 duration-300">
+                <div class="flex justify-center gap-1 mb-4" aria-hidden="true" focusable="false">
+                    <x-heroicon-o-academic-cap class="w-12 h-12 text-primary" />
+                    <x-heroicon-o-academic-cap class="w-12 h-12 text-primary" />
+                    <x-heroicon-o-academic-cap class="w-12 h-12 text-primary" />
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Vous avez un besoin plus technique</h3>
+                <p class="text-primary mb-4">
+                    Voici par exemple ce que je peux vous proposer :
+                </p>
+                <ul class="space-y-3 text-left w-full">
+                    <li class="flex items-start space-x-3">
+                        <x-heroicon-o-check-circle class="w-5 h-5 mt-1 text-accent flex-shrink-0" />
+                        <span>Initiation à la programmation ou à Linux</span>
+                    </li>
+                    <li class="flex items-start space-x-3">
+                        <x-heroicon-o-check-circle class="w-5 h-5 mt-1 text-accent flex-shrink-0" />
+                        <span>Installation de CMS (WordPress, Joomla…)</span>
+                    </li>
+                    <li class="flex items-start space-x-3">
+                        <x-heroicon-o-check-circle class="w-5 h-5 mt-1 text-accent flex-shrink-0" />
+                        <span>Conseils en sécurité, matériel ou outils</span>
+                    </li>
+                    <li class="flex items-start space-x-3">
+                        <x-heroicon-o-check-circle class="w-5 h-5 mt-1 text-accent flex-shrink-0" />
+                        <span>Ou tout autre demande que vous auriez en tête !</span>
+                    </li>
+                </ul>
+            </div>
     </div>
 
     {{-- Indicateurs --}}

@@ -12,7 +12,7 @@
 }
 
 .header-title {
-  @apply relative inline-block text-3xl md:text-5xl font-bold mb-4 z-10;
+  @apply relative inline-block text-3xl sm:text-4xl md:text-5xl font-bold mb-4 z-10;
 }
 
 .header-desc {
@@ -20,7 +20,23 @@
 }
 
 .header-title-underline{
-  @apply absolute left-0 top-12 w-full h-2 bg-accent/80 transform -skew-x-12 z-0;
+  @apply absolute left-0 bottom-0 w-full h-2 bg-accent/80 rounded-sm translate-y-2 sm:translate-y-3 z-0;
+}   
+
+.header-list{
+  @apply mt-6 flex flex-wrap justify-center gap-x-6 gap-y-4 text-base sm:text-lg;
+}
+
+.header-list-item{
+  @apply flex items-center gap-2;
+}
+
+.header-list-item-icone{
+  @apply w-5 h-5 text-accent;
+}
+
+.header-bg-icone {
+  @apply pointer-events-none absolute opacity-20 text-accent right-4 top-4 hidden lg:block w-40 h-40 z-0;
 }
 
 /* === Cartes de service === */

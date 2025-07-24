@@ -46,3 +46,7 @@
 .quiz-section-icon {
   @apply w-8 h-8 text-primary mb-4;
 }
+
+.component-quiz__progress {
+  @apply text-sm text-gray-600 mb-4;
+}

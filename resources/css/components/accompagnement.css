@@ -1,0 +1,71 @@
+.section-component {
+    @apply py-10 px-6 max-w-6xl mx-auto border-t border-accent mt-8;
+}
+
+.section-testimony {
+    @apply py-16 px-6 max-w-6xl mx-auto border-t border-accent mt-12;
+}
+
+.section-titre {
+    @apply text-3xl font-bold text-center text-primary mb-12;
+}
+
+.section-grid2x2 {
+    @apply grid gap-6 md:grid-cols-2;
+}
+
+.section-grid3x1 {
+    @apply grid gap-8 md:grid-cols-2 lg:grid-cols-3;
+}
+
+.acc-services-container {
+    @apply bg-white p-6 rounded-xl shadow flex items-start space-x-4 text-primary text-left;
+}
+
+.modale-container {
+    @apply bg-white p-6 rounded-xl shadow;
+}
+
+.levels-container {
+    @apply bg-white rounded-2xl shadow-md p-6 flex flex-col items-center text-center hover:shadow-lg transition transform hover:-translate-y-1 duration-300 text-primary;
+}
+
+.services-container-icone {
+    @apply w-10 h-10 text-accent flex-shrink-0;
+}
+
+.levels-container-div-icone {
+    @apply flex justify-center gap-1 mb-4;
+}
+
+.levels-container-icone {
+    @apply w-12 h-12 text-primary;
+}
+
+.services-container-titre {
+    @apply font-semibold text-lg mb-1;
+}
+
+.levels-container-titre {
+    @apply text-xl font-semibold mb-2;
+}
+
+.modales-container-titre {
+    @apply text-2xl font-semibold mb-4;
+}
+
+.levels-liste {
+    @apply space-y-3 text-left w-full;
+}
+
+.modales-liste {
+    @apply list-disc list-inside text-primary space-y-2
+}
+
+.levels-liste-item {
+    @apply flex items-start space-x-3;
+}
+
+.levels-liste-icone {
+    @apply w-5 h-5 mt-1 text-accent flex-shrink-0;
+}

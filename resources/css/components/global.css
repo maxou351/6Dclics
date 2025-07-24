@@ -228,3 +228,48 @@ TODO -> TAilwind*/
   }
 }
 
+//ACCOMPAGNEMENT
+/* === INTRO === */
+.intro-section {
+  @apply py-12 px-6 max-w-4xl mx-auto text-center text-primary ;
+}
+
+.intro-title {
+  @apply text-3xl font-bold mb-4;
+}
+
+.intro-desc {
+  @apply text-center text-lg mb-6;
+}
+
+.intro-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-6 text-base;
+}
+
+.intro-card {
+  @apply cursor-pointer bg-white p-6 rounded-2xl border border-primary/20 shadow-sm flex flex-col justify-between transition transform hover:-translate-y-1 hover:shadow-md;
+}
+
+.intro-card-title {
+  @apply text-xl font-semibold mb-2;
+}
+
+.intro-card-text {
+  @apply mb-3 leading-relaxed;
+}
+
+.intro-card-badge {
+  @apply inline-block text-sm font-medium px-3 py-1 rounded-full mb-4;
+}
+
+.intro-btn,
+.intro-link {
+  @apply inline-block w-fit bg-primary text-white px-5 py-3 rounded-xl font-medium shadow hover:bg-primary/90 transition;
+}
+
+.intro-btn {
+  @apply cursor-pointer;
+}
+
+
+
