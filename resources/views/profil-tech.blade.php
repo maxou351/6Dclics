@@ -2,50 +2,86 @@
 @section('title', 'Profil technique')
 
 @section('header')
-    <section class="header-pages-section">
+    <section class="relative header-pages-section">
         <div class="header-container">
-            <h1 class="header-title">
-                <span class="relative z-20">Missions techniques</span>
-                <span class="header-title-underline"></span>
-            </h1> 
+            <div class="relative inline-block">
+                <h1 class="relative header-title">
+                    <span class="relative z-20">Missions techniques</span>
+                    <span aria-hidden="true"
+                        class="header-title-underline">
+                    </span>
+                </h1> 
+            </div>
             <p class="header-desc">
                 Développement web, scripts, automatisation.
             </p>
-            <ul class="mt-6 flex flex-wrap justify-center gap-4 text-md text-white">
-                <li class="flex items-center gap-2">
-                    <x-heroicon-o-check class="w-5 h-5 text-accent" />
+            <ul class="header-list">
+                <li class="header-list-item">
+                    <x-heroicon-o-check class="header-list-item-icone" />
                     Backend/API, intégration, base de données
                 </li>
-                <li class="flex items-center gap-2">
-                    <x-heroicon-o-check class="w-5 h-5 text-accent" />
+                <li class="header-list-item">
+                    <x-heroicon-o-check class="header-list-item-icone" />
                     Scripts, outils, automatisation (Ansible, etc.)
                 </li>
-                <li class="flex items-center gap-2">
-                    <x-heroicon-o-check class="w-5 h-5 text-accent" />
+                <li class="header-list-item">
+                    <x-heroicon-o-check class="header-list-item-icone" />
                     Mise en production et maintenance légère
                 </li>
-                <li class="flex items-center gap-2">
-                    <x-heroicon-o-check class="w-5 h-5 text-accent" />
+                <li class="header-list-item">
+                    <x-heroicon-o-check class="header-list-item-icone" />
                     Approche propre, sécurisée, documentée
                 </li>
             </ul>
         </div>
-        <x-heroicon-o-code-bracket class="absolute top-20 right-8 w-28 h-28 text-accent opacity-50 hidden md:block" />
+
+        <!-- Code décoratif -->
+        <x-heroicon-o-code-bracket 
+            class="header-bg-icone" 
+            aria-hidden="true" />
     </section>
 @endsection
 
 @section('content')
 
-<section class="page-intro">
-    <div class="intro-container">
-        <h2 class="section-title">Ce que je propose</h2>
-        <ul class="intro-list">
-            <li>Blablza</li>
-            <li>Blablza</li>
-            <li>Blablza</li>
-            <li>Blablza</li>
-        </ul>
-        <p class="section-text mt-4">Blablza</p>
+<section id="freelance-process" class="py-16 px-6 max-w-6xl mx-auto text-center">
+    <h2 class="intro-title">Un partenaire technique pour vos projets</h2>
+
+    <div x-data="{ active: 0 }" class="grid gap-6 md:grid-cols-4">
+        @php
+            $steps = [
+                ['icon' => 'code-bracket', 'title' => 'Développement', 'desc' => 'Renfort sur vos projets web ou logiciels, en autonomie ou en équipe.'],
+                ['icon' => 'cpu-chip', 'title' => 'Architecture', 'desc' => 'Conception d’architectures robustes et évolutives adaptées à vos besoins.'],
+                ['icon' => 'bug-ant', 'title' => 'Optimisation & Debug', 'desc' => 'Résolution de problèmes, amélioration des performances et du code.'],
+                ['icon' => 'hand-thumb-up', 'title' => 'Collaboration', 'desc' => 'Intégration rapide à vos process, communication fluide et fiable.'],
+            ];
+        @endphp
+
+        @foreach ($steps as $index => $step)
+            <div 
+                class="bg-white p-6 rounded-xl shadow cursor-pointer transition transform hover:-translate-y-1 hover:shadow-lg"
+                :class="{ 'border-2 border-accent shadow-xl': active === {{ $index }} }"
+                @@click="active = {{ $index }}"
+            >
+                <div class="flex flex-col items-center text-center">
+                    <x-dynamic-component :component="'heroicon-o-' . $step['icon']" class="w-12 h-12 text-accent mb-4" />
+                    <h3 class="text-xl font-semibold mb-2">{{ $step['title'] }}</h3>
+                    <p class="text-primary mb-4">{{ $step['desc'] }}</p>
+                    <template x-if="active === {{ $index }}">
+                        <div class="text-sm text-primary bg-primary/5 p-4 rounded-lg mt-2">
+                            <p>
+                                @switch($index)
+                                    @case(0) Développement full-stack ou backend, maîtrise de plusieurs langages et frameworks, livrables maintenables et testés. @break
+                                    @case(1) Design d’API, microservices, choix technologiques et bonnes pratiques DevOps pour des systèmes performants. @break
+                                    @case(2) Analyse de code existant, correction de bugs critiques et optimisations de performances et sécurité. @break
+                                    @case(3) Travail en méthode agile, communication transparente et reporting régulier pour une mission sans frictions. @break
+                                @endswitch
+                            </p>
+                        </div>
+                    </template>
+                </div>
+            </div>
+        @endforeach
     </div>
 </section>
 

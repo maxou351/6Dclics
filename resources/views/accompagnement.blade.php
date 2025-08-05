@@ -230,7 +230,7 @@ TODO
             <div class="acc-services-container" role="listitem">
                 <x-heroicon-o-clock class="services-container-icone"/>
                 <div>
-                    <h3 class="section-container-titre ">Formation courte</h3>
+                    <h3 class="services-container-titre">Formation courte</h3>
                     <p>Apprendre à maîtriser un outil ou une fonctionnalité en une ou deux sessions.</p>
                 </div>
             </div>
@@ -489,8 +489,6 @@ TODO
                     </button>
                 </div>
             </div>
-
-
 
         </div>
     </section>
