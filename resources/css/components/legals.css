@@ -1,0 +1,25 @@
+/* Mentions légales */
+
+.legal-section {
+    @apply bg-gray-50 py-12;
+}
+
+.legal-container {
+    @apply max-w-3xl mx-auto px-6 bg-white shadow-md rounded-2xl p-8;
+}
+
+.legal-title {
+    @apply text-3xl font-bold text-gray-900 mb-6 text-center;
+}
+
+.legal-container p {
+    @apply text-gray-700 leading-relaxed mb-6;
+}
+
+.legal-container strong {
+    @apply block font-semibold text-gray-900 mb-2;
+}
+
+.legal-container a {
+    @apply text-blue-600 underline hover:text-blue-800;
+}

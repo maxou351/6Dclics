@@ -12,6 +12,8 @@
         <li><a href="{{ url('/contact') }}" class="hover:text-blue-600">Contact</a></li>
         <li><a href="{{ url('/mentions-legales') }}" class="hover:text-blue-600">Mentions légales</a></li>
         <li><a href="{{ url('/confidentialite') }}" class="hover:text-blue-600">Politique de confidentialité</a></li>
+        <li><a href="{{ url('/tarifs') }}" class="hover:text-blue-600">Tarifs</a></li>
+        <li><a href="{{ url('/plan-site') }}" class="hover:text-blue-600">Plan du site</a></li>
     </ul>
 </section>
 @endsection

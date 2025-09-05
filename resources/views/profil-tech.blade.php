@@ -173,7 +173,7 @@ TODO
     </svg>
   </a>
 
-  <a href="mailto:contact@tonsite.com" aria-label="Email" class="text-gray-600 hover:text-rose-600 transition-transform transform hover:scale-110">
+  <a href="mailto:contact@6dclics.fr" aria-label="Email" class="text-gray-600 hover:text-rose-600 transition-transform transform hover:scale-110">
     <!-- Mail icon -->
     <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
       <path d="M4 4h16c1.1 0 2 .9 2 2v.01l-10 6.49L2 6.01V6c0-1.1.9-2 2-2zm16 4.25l-8 5.19-8-5.19V18c0 1.1.9 2 2 2h12a2 2 0 002-2V8.25z"/>

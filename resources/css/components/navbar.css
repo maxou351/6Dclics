@@ -1,34 +1,30 @@
 /* === Navbar === */
 /* TODO pass to tailwind
 clic outide the bar when depliée */
-body, html {
-  height: auto; /* vérifie qu’aucun parent n’a overflow: hidden ou height: 100% */
-}
 
 .navbar {
-  background-color: var(--color-bg);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(10px);
+  @apply bg-white backdrop-blur-md;
 }
 
 .navbar__container {
-  max-width: 1024px;
-  margin: 0 auto;
-  padding: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @apply max-w-screen-lg mx-auto p-2 flex justify-between items-center;
 }
 
 /* === Brand === */
 .navbar__brand {
-  font-weight: 700;
-  font-size: 1.25rem;
-  color: var(--color-primary);
-  text-decoration: none;
-}
+  @apply text-primary font-bold text-xl no-underline;
+} 
 
 .navbar__brand img {
+  @apply inline-block h-20 w-auto;
+}
+
+.navbar__brand span {
+  @apply text-primary text-xl font-semibold;
+}
+
+/* .navbar__brand img {
   display: inline-block;
   height: 2rem;
   width: auto;
@@ -38,7 +34,7 @@ body, html {
   font-size: 1.25rem;
   font-weight: 600;
   color: var(--color-primary);
-}
+} */
 
 /* === Toggle hamburger === */
 .navbar__toggle {
@@ -75,7 +71,7 @@ body, html {
   position: relative;
   display: inline-block; /* nécessaire pour les effets de transform */
   font-weight: 500;
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: var(--color-text);
   text-decoration: none;
   transition: color 0.3s ease, transform 0.3s ease;

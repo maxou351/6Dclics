@@ -18,7 +18,7 @@
                     <path d="M19 0h-14a5 5 0 00-5 5v14a5 5 0 005 5h14a5 5 0 005-5v-14a5 5 0 00-5-5zm-11 19h-3v-9h3v9zm-1.5-10.3a1.8 1.8 0 01-1.8-1.8 1.8 1.8 0 113.6 0 1.8 1.8 0 01-1.8 1.8zm13.5 10.3h-3v-4.5c0-1.1-.4-2-1.4-2s-1.6.9-1.6 2v4.5h-3v-9h3v1.2c.5-.9 1.5-1.4 2.6-1.4 2 0 3.4 1.3 3.4 4.1v5.1z"/>
                 </svg>
             </a>
-            <a href="mailto:max.morelli3@gmail.com" aria-label="Email" class="hover:text-gray-800">
+            <a href="mailto:contact@6dclics.fr" aria-label="Email" class="hover:text-gray-800">
                 <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
                     <path d="M12 13.065l-11.993-7.49v15.425h23.986v-15.425l-11.993 7.49zm0-2.13l11.982-7.49h-23.964l11.982 7.49z"/>
                 </svg>

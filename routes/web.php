@@ -5,6 +5,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProjetController;
 use App\Http\Controllers\LexiqueController;
 use Illuminate\Support\Facades\Config;
+
 /*
 |--------------------------------------------------------------------------
 | Pages statiques
@@ -29,6 +30,8 @@ Route::get('/plan-site', fn () => view('plan-site'))->name('plan-site');
 Route::get('/check-app-key', function () {
     return 'APP_KEY: ' . Config::get('app.key');
 });
+
+
 /*
 |--------------------------------------------------------------------------
 | Projets (dynamiques)

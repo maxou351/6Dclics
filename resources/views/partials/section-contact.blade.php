@@ -31,12 +31,12 @@
         </a>
 
         <!-- Email -->
-        <a href="mailto:max.morelli3@gmail.com" 
+        <a href="mailto:contact@6dclics.fr" 
         class="cta-link group" 
-        aria-label="Envoyer un email à max.morelli3@gmail.com"
+        aria-label="Envoyer un email à contact@6dclics.fr"
         >
             <x-heroicon-o-envelope class="cta-icon" aria-hidden="true" />
-            <span class="cta-item">max.morelli3@gmail.com</span>
+            <span class="cta-item">contact@6dclics.fr</span>
         </a>
     </div>
   </div>

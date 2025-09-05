@@ -1,7 +1,7 @@
 {{-- resources/views/accueil.blade.php --}}
 @extends('layouts.app')
 
-@section('title', 'Bienvenue')
+@section('title', "Les 6D'clics")
 
 {{--
 TODO 

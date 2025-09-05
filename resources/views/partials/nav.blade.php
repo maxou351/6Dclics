@@ -1,9 +1,7 @@
 <nav class="navbar sticky top-0 z-50 bg-white shadow">
   <div class="navbar__container">
-    {{-- <a href="{{ url('/') }}" class="navbar__brand">Max Morelli</a> --}}
     <a href="{{ url('/') }}" class="navbar__brand flex items-center space-x-2">
-      <img src="{{ asset('images/logo1.png') }}" alt="Logo Max Morelli" class="h-8 w-auto" />
-      <span>Max Morelli</span>
+      <img src="{{ asset('images/Logo-6DClics.svg') }}" alt="Logo Max Morelli" class="h-500 w-500" />
     </a>
 
     <button id="navbar-toggle" class="navbar__toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navbar-menu">
@@ -35,11 +33,11 @@
          class="navbar__link @navactive('profil-tech')" 
          role="menuitem">Profil technique</a>
       </li>
-      <li class="navbar__item" role="none">
+      {{-- <li class="navbar__item" role="none">
         <a href="{{ url('/projets') }}" 
          class="navbar__link @navactive('projets.*')" 
         role="menuitem">Galerie des projets</a>
-      </li>
+      </li> --}}
       <li class="navbar__item" role="none">
         <a href="{{ url('/contact') }}" 
          class="navbar__link @navactive('contact')" 

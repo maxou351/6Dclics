@@ -8,6 +8,7 @@
 @import './components/quiz.css';
 @import './components/testPages.css';  
 @import './components/accompagnement.css'; 
+@import './components/legals.css'; 
  
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
@@ -21,7 +22,7 @@
   --color-text: '#1f2937';
   --color-bg: '#ffffff';
   --color-light: '#f9fafb';
-  --color-accent: '#DEAB48';
+  --color-accent: '#fbbf24'; 
 }
 
 /* TODO 

@@ -24,7 +24,7 @@ class ContactController extends Controller
         ]);
 
         // Tu peux ici envoyer un mail, stocker dans la BDD, etc.
-        Mail::to('max.morelli3@gmail.com')->send(new ContactMessage($validated));
+        Mail::to('contact@6dclics.fr')->send(new ContactMessage($validated));
         // dd('ici 1');
         return redirect()->back()->with('success', true);
     }
