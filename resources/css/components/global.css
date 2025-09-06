@@ -243,11 +243,11 @@ TODO -> TAilwind*/
 }
 
 .intro-grid {
-  @apply grid grid-cols-1 md:grid-cols-2 gap-6 text-base;
+  @apply grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12 text-base;
 }
 
 .intro-card {
-  @apply cursor-pointer bg-white p-6 rounded-2xl border border-primary/20 shadow-sm flex flex-col justify-between transition transform hover:-translate-y-1 hover:shadow-md;
+  @apply cursor-pointer bg-white p-6 rounded-2xl border border-primary/20 shadow-sm justify-between transition transform hover:-translate-y-1 hover:shadow-md;
 }
 
 .intro-card-title {
@@ -265,6 +265,10 @@ TODO -> TAilwind*/
 .intro-btn,
 .intro-link {
   @apply inline-block w-fit bg-primary text-white px-5 py-3 rounded-xl font-medium shadow hover:bg-primary/90 transition;
+}
+
+.intro-btn-bg-dark {
+  @apply inline-block w-fit bg-white text-primary px-4 py-3 rounded-xl font-medium shadow hover:bg-white/90 transition cursor-pointer;
 }
 
 .intro-btn {

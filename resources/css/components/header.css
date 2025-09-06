@@ -1,6 +1,6 @@
 /* === Header === */
 .header-section{
-  @apply bg-primary text-white py-10 pb-4 sm:pb-6 md:py-16 px-4 shadow-md shadow-white/20;
+  @apply bg-primary text-white pt-10 pb-4 sm:pb-6 md:pt-10 px-4 shadow-md shadow-white/20;
 }
 
 .header-pages-section {

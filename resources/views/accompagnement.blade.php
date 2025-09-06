@@ -13,7 +13,7 @@
                         class="header-title-underline"></span>
                 </h1>
             </div>
-            <p class="header-desc">Formation, dépannage, assistance.</p>
+            <p class="header-desc">Formation, dépannage, assistance et services informatiques.</p>
 
             <ul class="header-list">
                 <li class="header-list-item">
@@ -85,51 +85,69 @@ TODO
             Que vous soyez débutant, curieux ou déjà à l'aise avec le numérique, je vous propose un accompagnement ou dépannage adapté à votre niveau, vos besoins, et votre matériel. 
         </p>
 
-        <div class="intro-grid">
-            <!-- Bloc questionnaire -->
-            <div 
-              class="intro-card"
-              onclick="document.getElementById('start-quiz-btn').click()">
-                <div>
-                    <h3 class="intro-card-title">Vous voulez aller droit au but&nbsp;?</h3>
-                    <p class="intro-card-text">
-                        Répondez à <strong>2 questions</strong> pour être guidé vers la section qui vous concerne :
-                        type d’accompagnement, <strong>tarifs</strong>, modalités, tout est ciblé selon votre besoin.
-                    </p>
-                    <span class="intro-card-badge bg-accent cursor-default opacity-90 animate-pulse-soft">
-                        💡 Conseillé si vous savez ce que vous cherchez
-                    </span>
+        <div class="relative">
+            <div class="intro-grid">
+                <!-- Bloc questionnaire -->
+                <div 
+                class="intro-card"
+                onclick="document.getElementById('start-quiz-btn').click()">
+                    <div>
+                        <h3 class="intro-card-title">Vous voulez aller droit au but&nbsp;?</h3>
+                        <p class="intro-card-text">
+                            Répondez à <strong>2 questions</strong> pour être guidé vers la section qui vous concerne :
+                            type d’accompagnement, <strong>tarifs</strong>, modalités, tout est ciblé selon votre besoin.
+                        </p>
+                        <span class="intro-card-badge bg-accent cursor-default opacity-90 animate-pulse-soft">
+                            💡 Conseillé si vous savez ce que vous cherchez
+                        </span>
+                    </div>
+                    <button
+                        id="start-quiz-btn"
+                        class="intro-btn"
+                    >
+                        🎯 Je lance le questionnaire
+                    </button>
                 </div>
-                <button
-                    id="start-quiz-btn"
-                    class="intro-btn"
-                >
-                    🎯 Je lance le questionnaire
-                </button>
-            </div>
 
-            <!-- Bloc navigation libre -->
-            <div 
-              class="intro-card"
-              onclick="window.location.href='#services'">
-                <div>
-                    <h3 class="intro-card-title">Vous préférez explorer par vous-même&nbsp;?</h3>
-                    <p class="intro-card-text">
-                        Parcourez la page à votre rythme, sans passer par le questionnaire. Vous y trouverez toutes les informations.
-                    </p>
-                    <span class="intro-card-badge">
-                        👀 Vue d’ensemble complète
-                    </span>
+                {{-- <!-- OU avec traits -->
+                <div class="items-center justify-center gap-2 mt-4 hidden md:flex">
+                    <hr class="border-t border-gray-300 w-16">
+                    <span class="font-semibold text-gray-500 text-lg px-2">OU</span>
+                    <hr class="border-t border-gray-300 w-16">
+                </div> --}}
+
+                <!-- Bloc navigation libre -->
+                <div 
+                class="intro-card"
+                onclick="window.location.href='#services'">
+                    <div>
+                        <h3 class="intro-card-title">Vous préférez explorer par vous-même&nbsp;?</h3>
+                        <p class="intro-card-text">
+                            Parcourez la page à votre rythme, sans passer par le questionnaire. Vous y trouverez toutes les informations.
+                        </p>
+                        <span class="intro-card-badge">
+                            👀 Vue d’ensemble complète
+                        </span>
+                    </div>
+                    <a
+                        href="#services"
+                        class="intro-link"
+                        role="button"
+                    >
+                        🧭 Je préfère explorer la page
+                    </a>
                 </div>
-                <a
-                    href="#services"
-                    class="intro-link"
-                    role="button"
-                >
-                    🧭 Je préfère explorer la page
-                </a>
+
+            </div>
+            
+            <!-- OU sur desktop -->
+            <div class="absolute hidden md:block top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 px-2 py-1 text-primary font-bold">
+                OU
+                {{-- <hr class="border-t border-gray-300 w-16"> --}}
             </div>
         </div>
+
+        
     </section>
 
     {{-- Questionnaire --}}

@@ -25,7 +25,7 @@ TODO
                 <span class="header-title-underline"></span>
             </h1> 
             <p class="header-desc">
-                Entreprise d'accompagnement informatique, création de sites sur mesure & réalisation de missions techniques.
+                Entreprise d'assistance & dépannage informatique, création de sites sur mesure et réalisation de missions techniques.
             </p>
 
             {{-- Carroussel sur Mobile --}}
@@ -39,8 +39,8 @@ TODO
                     <x-card-service
                         device="desktop"
                         icon="heroicon-o-light-bulb"
-                        title="Accompagnement & formation informatique"
-                        desc="Vous êtes un particulier en questionnement avec l'informatique et vous avez besoin d'aide ou de formation"
+                        title="Accompagnement, assistance & formation informatique"
+                        desc="Vous êtes un particulier en questionnement avec l'informatique et vous avez besoin d'aide, d'un dépannage ou de formation."
                         url="/accompagnement"
                         label="En savoir plus"
                     />
@@ -50,7 +50,7 @@ TODO
                         device="desktop"
                         icon="heroicon-o-globe-alt"
                         title="Création, évolution & gestion de site web"
-                        desc="Vous êtes entrepreneur, artisan ou association et vous souhaitez un site clair, moderne et facile à gérer"
+                        desc="Vous êtes entrepreneur, artisan ou association et vous souhaitez un site clair, moderne et facile à gérer."
                         url="/creation-site"
                         label="Découvrir"
                     />
@@ -60,13 +60,15 @@ TODO
                         device="desktop"
                         icon="heroicon-o-code-bracket"
                         title="Développement & missions techniques"
-                        desc="Vous êtes recruteur ou porteur de projet et vous cherchez un développeur fiable et expérimenté"
+                        desc="Vous êtes recruteur ou porteur de projet et vous cherchez un développeur fiable et expérimenté."
                         url="/profil-tech"
                         label="Voir le profil"
                     />
             </div>
         </div>
-        <div class="flex justify-center mt-4 md:hidden">
+
+        {{-- Chevron vers le bas --}}
+        <div class="flex justify-center mt-4 ">
             <x-heroicon-o-chevron-down class="h-6 w-6 text-white animate-bounce" />
         </div>
     </section>
@@ -83,7 +85,7 @@ TODO
     - changer/ Ajouter photos
     - explications noms revoir contenu + css
     --}}
-    <section class="section-pres">
+    <section id="presentation" class="section-pres">
         <div class="container-pres">
 
             {{-- Présentation : bloc texte + photo --}}
@@ -107,7 +109,7 @@ TODO
 
                 <div class="div-img-bloc-duo">
                     <img 
-                      src="{{ asset('images/Untitled.jpg') }}" 
+                      src="{{ asset('images/MaxMorelli.jpg') }}" 
                       class="img-bloc-duo" 
                       alt="Image" 
                     />
@@ -152,7 +154,7 @@ TODO
                     </p>
 
                     <blockquote class="bloc-quote">
-                        <strong>Créer, expliquer, résoudre. C’est ça que je veux faire au quotidien.</strong>
+                        <strong>Créer, expliquer, résoudre. C’est ce que je veux faire au quotidien.</strong>
                     </blockquote>
 
                     <p>
@@ -211,13 +213,14 @@ TODO
                     <p class="mt-4">
                         <span class="text-accent font-semibold">Les 6D</span>, ce sont <strong>six mots-clés</strong> qui définissent mon approche :
                     </p>
+                    
                     <ul class="list-disc list-inside mt-2 space-y-1">
-                        <li><strong>Découvrir</strong> — rendre le numérique accessible, étape par étape.</li>
-                        <li><strong>Débloquer</strong> — résoudre les obstacles techniques ou mentaux.</li>
-                        <li><strong>Développer</strong> — des compétences, des outils ou des projets.</li>
-                        <li><strong>Déployer</strong> — mettre en ligne, diffuser, rendre visible.</li>
-                        <li><strong>Documenter</strong> — expliquer clairement, guider durablement.</li>
-                        <li><strong>Dépanner</strong> — intervenir rapidement, de manière fiable.</li>
+                        <li><strong><span class="text-accent">D</span>écouvrir</strong> — rendre le numérique accessible, étape par étape.</li>
+                        <li><strong><span class="text-accent">D</span>ébloquer</strong> — résoudre les obstacles techniques ou mentaux.</li>
+                        <li><strong><span class="text-accent">D</span>évelopper</strong> — des compétences, des outils ou des projets.</li>
+                        <li><strong><span class="text-accent">D</span>éployer</strong> — mettre en ligne, diffuser, rendre visible.</li>
+                        <li><strong><span class="text-accent">D</span>ocumenter</strong> — expliquer clairement, guider durablement.</li>
+                        <li><strong><span class="text-accent">D</span>épanner</strong> — intervenir rapidement, de manière fiable.</li>
                     </ul>
 
                     <p class="mt-4">
@@ -302,13 +305,19 @@ TODO
         </div>
     </section> --}}
 
-    {{-- Timeline parcours 
-    TODO
-    - Lien vers CV
-    --}}
+    {{-- Timeline parcours --}}
     <section id="parcours" class="scroll-mt-24 py-6 md:py-8 bg-white">
         <div class="max-w-4xl mx-auto px-6">
             <h2 class="text-3xl font-bold text-center mb-12">Mon parcours</h2>
+            <div class="text-right p-1">
+                <a
+                    href="{{ url('/profil-tech#cv') }}" 
+                    class="intro-btn"
+                    role="button"
+                >
+                    🧭 Voir le cv complet
+                </a>
+            </div>
             <ol class="relative border-s-4 border-primary">
 
                 <li class="timeline-group">

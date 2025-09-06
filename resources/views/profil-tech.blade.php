@@ -131,7 +131,7 @@ TODO
 TODO
 - keep loop ? Gestion de la loupe
  --}}
-<section class="section-container text-center my-12 px-4 max-w-5xl mx-auto">
+<section id="cv" class="section-container text-center my-12 px-4 max-w-5xl mx-auto">
     <h2 class="section-title mb-6">Consulter mon CV</h2>
     <p class="mt-6 text-sm text-gray-600">
         👉 Vous pouvez aussi <a href="{{ asset('cv-max-morelli.pdf') }}" target="_blank"
