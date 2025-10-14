@@ -91,7 +91,7 @@
             <!-- Flèche gauche -->
             <button 
                 @@click="active = (active - 1 + 4) % 4"
-                class="left-0 bg-accent text-white px-4 py-3 rounded-r-full shadow hover:bg-accent/90 transition flex items-center gap-2 cursor-pointer"
+                class="left-0 bg-accent text-white px-4 py-3 rounded-r-full shadow hover:bg-accent/90 transition hidden md:flex items-center gap-2 cursor-pointer"
                 aria-label="Étape précédente"
             >
                 <x-heroicon-o-arrow-left class="w-5 h-5" />
@@ -102,7 +102,7 @@
             </button>
 
             <!-- Contenu des étapes -->
-            <div class="bg-white p-6 text-primary w-full">
+            <div class="bg-white py-6 text-primary w-full">
                 {{-- Creation --}}
                 <template x-if="active === 0">
                     <div>
@@ -224,7 +224,7 @@
             <!-- Flèche droite -->
             <button 
                 @@click="active = (active + 1) % 4"
-                class=" right-0 bg-accent text-white px-4 py-3 rounded-l-full shadow hover:bg-accent/90 transition flex items-center gap-2 cursor-pointer"
+                class="right-0 bg-accent text-white px-4 py-3 rounded-l-full shadow hover:bg-accent/90 transition flex items-center gap-2 cursor-pointer"
                 aria-label="Étape suivante"
             >
                 <span class="hidden md:inline text-sm"
