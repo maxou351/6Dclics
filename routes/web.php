@@ -16,7 +16,7 @@ Route::get('/', fn () => view('accueil'))->name('accueil');
 
 Route::get('/accompagnement', fn () => view('accompagnement'))->name('accompagnement');
 Route::get('/creation-site', fn () => view('creation-site'))->name('creation-site');
-Route::get('/profil-tech', fn () => view('profil-tech'))->name('profil-tech');
+Route::get('/mission-technique', fn () => view('mission-technique'))->name('mission-technique');
 Route::get('/contact', fn () => view('contact'))->name('contact');
 Route::get('/tarifs', fn () => view('tarifs'))->name('tarifs');
 Route::get('/lexique', fn () => view('lexique'))->name('lexique');

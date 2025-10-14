@@ -1,6 +1,10 @@
 @extends('layouts.app')
 
-@section('title', 'Accompagnement informatique')
+@section('title', 'Accompagnement informatique – Les 6D\'Clics')
+@section('meta_description', "Formation, dépannage et aide informatique sur mesure à Rennes. À domicile ou à distance à Rennes.")
+@section('meta_keywords', 'accompagnement informatique, formation numérique, aide ordinateur, dépannage, apprentissage, seniors, Rennes')
+@section('og_title', 'Accompagnement informatique personnalisé – Les 6D\'Clics')
+@section('og_description', "Formation, dépannage et aide informatique sur mesure à Rennes. Pour particuliers, indépendants ou associations.")
 
 {{-- Header --}}
 @section('header')

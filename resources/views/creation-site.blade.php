@@ -1,6 +1,10 @@
 @extends('layouts.app')
 
-@section('title', 'Création de site web')
+@section('title', 'Création de site web – Les 6D\'Clics')
+@section('meta_description', "Création, refonte et maintenance de sites web modernes, accessibles et personnalisés pour particuliers et professionnels à Rennes.")
+@section('meta_keywords', 'création site web, site vitrine, site e-commerce, maintenance, refonte, Rennes')
+@section('og_title', 'Création de site web – Les 6D\'Clics')
+@section('og_description', "Faites créer un site clair, rapide et facile à gérer. Accompagnement sur mesure à chaque étape.")
 
 @section('header')
     <section class="relative header-pages-section">
@@ -45,22 +49,15 @@
 
 @section('content')
 
-{{-- To keep pour données --}}
-{{--            <li>Création de site vitrine responsive et performant</li>
-            <li>Sites 100% codés main ou administrables avec WordPress selon vos besoins</li>
-            <li>Optimisation <span class="lexique">SEO</span> de base et conseils sur la stratégie de contenu</li>
-            <li>Maintenance technique, mises à jour, ou refonte légère</li>
-        </ul>
-        <p class="intro-desc">Je prends le temps d’échanger pour comprendre votre activité, vos objectifs, et concevoir un site à votre image.</p> --}}
-
+{{-- Processus de création --}}
 <section id="process" class="py-16 px-6 max-w-6xl mx-auto">
     <h2 class="text-3xl font-bold text-center text-primary mb-12">Vous avez un projet ? Je peux vous accompagner !</h2>
 
     <div x-data="{ active: 0 }" class="relative">
         <!-- Fil central -->
-        <div class="absolute top-6 left-0 right-0 h-1 bg-accent/30"></div>
+        <div class="absolute top-6 left-0 right-0 h-1 bg-accent/30 hidden md:block"></div>
 
-        <div class="grid grid-cols-4 gap-4 relative z-10">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 relative z-10">
             @php
                 $steps = [
                     ['icon' => 'plus-circle', 'title' => 'Création', 'desc' => 'Site web sur mesure'],
@@ -88,6 +85,7 @@
             @endforeach
         </div>
 
+        <!-- Spécification -->
         <div class="mt-12 flex items-center justify-between shadow-md rounded-xl max-w-6xl mx-auto gap-6">
 
             <!-- Flèche gauche -->
@@ -216,7 +214,7 @@
                     class="bg-primary text-white px-6 py-3 rounded-lg shadow hover:bg-primary/90 transition font-semibold">
                         Voir les tarifs
                     </a>
-                    <a href="#contact" 
+                    <a href="{{ url('/contact') }}" 
                     class="border-2 border-primary text-primary px-6 py-3 rounded-lg shadow hover:bg-primary hover:text-white transition font-semibold">
                         Me contacter
                     </a>
@@ -231,10 +229,6 @@
             >
                 <span class="hidden md:inline text-sm"
                     x-text="['Creation', 'Amélioration', 'Maintenance', 'Conseil'][(active + 1) % 4]">
-                    {{-- <template x-if="active === 0">Maintenance</template>
-                    <template x-if="active === 1">Amélioration</template>
-                    <template x-if="active === 2">Conseil</template>
-                    <template x-if="active === 3">Création</template> --}}
                 </span>
                 <x-heroicon-o-arrow-right class="w-5 h-5" />
             </button>
@@ -242,90 +236,11 @@
     </div>
 </section>
 
-{{-- <section id="tarifs" class="py-16 px-6 max-w-4xl mx-auto text-center border-t border-accent">
-  <h2 class="text-3xl font-bold text-primary mb-8">Tarifs & formules</h2>
-  <p class="mb-8 text-center text-gray-700 max-w-3xl mx-auto"> 
-        Les tarifs indiqués ci-dessous sont à titre indicatif. 
-        Chaque projet étant unique, je m’adapte à vos besoins spécifiques. 
-        Contactez-moi pour un devis personnalisé et sans engagement. 
-  </p>
-  <div class="space-y-10">
-
-    <div 
-        x-data="{ showButton: false }" 
-        x-init="
-            window.addEventListener('scroll', () => {
-            showButton = window.scrollY > 300;
-            })
-        " 
-        x-show="showButton"
-        x-transition
-        class="fixed bottom-6 right-6 z-50"
-        >
-        <a href="{{ route('contact') }}" 
-            class="bg-primary text-white px-6 py-3 rounded-full shadow-lg hover:bg-primary/90 transition font-semibold flex items-center gap-2">
-            📩 Demander un devis
-        </a>
-        <button 
-            @@click="showButton = false" 
-            class="absolute -top-2 -right-2 bg-white text-primary border border-primary rounded-full p-1 shadow hover:bg-primary hover:text-white transition"
-            aria-label="Fermer le bouton"
-        >
-            <x-heroicon-o-x-mark class="w-4 h-4" />
-        </button>
-    </div>
-
-
-    <!-- Création de site -->
-    <div class="bg-white shadow-md rounded-xl p-6">
-      <h3 class="text-2xl font-semibold mb-4">Création de site web</h3>
-      <p class="mb-6">Forfait performant et accessible pour les TPE et pros à Rennes : présence en ligne de qualité sans surcoût inutile.</p>
-      <ul class="list-disc list-inside text-left text-gray-700 mb-4">
-        <li>Site vitrine simple (2–5 pages) : <strong>~1 500 €</strong></li>
-        <li>Site plus complet avec blog ou fonctionnalités intermédiaires : <strong>2 000 à 3 000 €</strong></li>
-        <li>Site e-commerce ou application légère : <strong>3 000 à 4 500 €</strong></li>
-      </ul>
-      <p class="text-sm text-gray-600">Basé sur des tarifs journaliers moyens autour de 350 € à 450 €/jour (dev freelance à Rennes) et une semaine de travail selon la complexité :contentReference[oaicite:1]{index=1}.</p>
-    </div>
-
-    <!-- Amélioration -->
-    <div class="bg-white shadow-md rounded-xl p-6">
-      <h3 class="text-2xl font-semibold mb-4">Amélioration & optimisation</h3>
-      <p class="mb-6">Forfait horaire flexible facturé au besoin pour booster votre site sans gros engagement.</p>
-      <ul class="list-disc list-inside text-left text-gray-700 mb-4">
-        <li>SEO, contenu, architecture : <strong>~60–80 €/h</strong></li>
-        <li>Performance & vitesse (code, cache, images) : <strong>~60–80 €/h</strong></li>
-        <li>Ergonomie/design & accessibilité : <strong>~60–80 €/h</strong></li>
-      </ul>
-      <p class="text-sm text-gray-600">Tarif cohérent avec les TJM freelance observés sur la région Rennes et France (~300–400 €/j soit 60–80 €/h) :contentReference[oaicite:2]{index=2}.</p>
-    </div>
-
-    <!-- Maintenance -->
-    <div class="bg-white shadow-md rounded-xl p-6">
-      <h3 class="text-2xl font-semibold mb-4">Maintenance & support continu</h3>
-      <p class="mb-6">Abonnement mensuel tout inclus – installation initiale gratuite pendant 2 mois si j’ai créé votre site.</p>
-      <ul class="list-disc list-inside text-left text-gray-700 mb-4">
-        <li>Site vitrine : <strong>~60 € / mois</strong></li>
-        <li>Site e-commerce ou site à fort trafic : <strong>~100–120 € / mois</strong></li>
-        <li>Dépannage prioritaire ou interventions urgentes : <strong>option +20 €/mois</strong></li>
-      </ul>
-      <p class="text-sm text-gray-600">Ces tarifs se situent dans la fourchette standard en freelance (entre ~60 et 200 €/mois selon la complexité) :contentReference[oaicite:3]{index=3}.</p>
-    </div>
-
-    <!-- Conseil & audit -->
-    <div class="bg-white shadow-md rounded-xl p-6">
-      <h3 class="text-2xl font-semibold mb-4">Conseil & audit stratégique</h3>
-      <p class="mb-6">Besoin d’un diagnostic clair ou d’un éclairage expert ? Je propose un audit personnalisé ou un accompagnement sur devis.</p>
-      <p class="text-left text-gray-700"><strong>→ Contactez-moi pour un devis gratuit sur-mesure selon votre projet.</strong></p>
-    </div>
-
-  </div>
-</section> --}}
-
-<section id="processus" class="py-20 px-6 max-w-6xl mx-auto">
-  <h2 class="text-3xl font-bold text-primary text-center mb-12">Comment je travaille</h2>
+<section id="processus-story" class="py-20 px-6 max-w-5xl mx-auto text-center relative">
+  <h2 class="text-3xl font-bold text-primary text-center mb-12">Votre parcours, étape par étape</h2>
   <p class="mb-16 text-gray-700 max-w-3xl mx-auto text-center">
-    Une méthode simple et adaptable, pensée pour rendre chaque projet fluide et efficace.
+    Chaque projet est une aventure unique. Voici comment nous collaborons, 
+    du premier échange jusqu’à la mise en ligne et le suivi continu.
   </p>
 
   <div class="grid md:grid-cols-2 gap-8">
@@ -361,16 +276,9 @@
       <p class="text-gray-600">Déploiement, formation, et maintenance pour assurer la réussite à long terme de votre projet.</p>
     </div>
   </div>
-</section>
 
-<section id="processus-story" class="py-20 px-6 max-w-5xl mx-auto text-center relative">
-  <h2 class="text-3xl font-bold text-primary mb-8">Votre parcours, étape par étape</h2>
-  <p class="text-gray-700 max-w-3xl mx-auto mb-16">
-    Chaque projet est une aventure unique. Voici comment nous collaborons, 
-    du premier échange jusqu’à la mise en ligne et le suivi continu.
-  </p>
-
-  <div class="relative mx-auto w-[500px] h-[500px]">
+  <br>
+  {{-- <div class="relative mx-auto w-[500px] h-[500px]">
     <!-- Illustration centrale -->
     <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
                 bg-white shadow-lg rounded-full w-36 h-36 flex items-center justify-center z-10">
@@ -404,15 +312,14 @@
       <h3 class="text-lg font-semibold text-primary">Lancement</h3>
       <p class="text-sm text-gray-600 max-w-[150px]">Mise en ligne, suivi et maintenance.</p>
     </div>
-  </div>
+  </div> --}}
 </section>
 
 {{-- SECTION TARIFS
 TODO
-- BTN réapparait au scroll = Absolument insupportable
-- Modifs tarifs 
--enlevber petites lignes
+- BTN réapparait au scroll = Absolument insupportable + descend trop loin sur la page
  --}}
+
 <section id="tarifs" class="py-16 px-6 max-w-4xl mx-auto text-center border-t border-accent/40">
   <h2 class="text-3xl font-bold text-primary mb-8">Tarifs & formules</h2>
   <p class="mb-10 text-center text-gray-700 max-w-3xl mx-auto leading-relaxed"> 
@@ -453,11 +360,10 @@ TODO
       <h3 class="text-2xl font-semibold text-primary mb-5">Création de site web</h3>
       <p class="mb-6 text-gray-800 leading-relaxed">Forfait performant et accessible pour les TPE et pros à Rennes : présence en ligne de qualité sans surcoût inutile.</p>
       <ul class="list-disc list-inside text-left text-gray-700 space-y-2 mb-6">
-        <li>Site vitrine simple (2–5 pages) : <strong>~1 500 €</strong></li>
+        <li>Site vitrine simple (2–5 pages) : <strong>A partir de 1 300 €</strong></li>
         <li>Site plus complet avec blog ou fonctionnalités intermédiaires : <strong>2 000 à 3 000 €</strong></li>
         <li>Site e-commerce ou application légère : <strong>3 000 à 4 500 €</strong></li>
       </ul>
-      <p class="text-sm text-gray-600 italic">Basé sur des tarifs journaliers moyens autour de 350 € à 450 €/jour (dev freelance à Rennes) et une semaine de travail selon la complexité.</p>
     </div>
 
     <!-- Amélioration -->
@@ -466,11 +372,10 @@ TODO
       <h3 class="text-2xl font-semibold text-primary mb-5">Amélioration & optimisation</h3>
       <p class="mb-6 text-gray-800 leading-relaxed">Forfait horaire flexible facturé au besoin pour booster votre site sans gros engagement.</p>
       <ul class="list-disc list-inside text-left text-gray-700 space-y-2 mb-6">
-        <li>SEO, contenu, architecture : <strong>~60–80 €/h</strong></li>
-        <li>Performance & vitesse (code, cache, images) : <strong>~60–80 €/h</strong></li>
-        <li>Ergonomie/design & accessibilité : <strong>~60–80 €/h</strong></li>
+        <li>SEO, contenu, architecture : <strong>~60 €/h</strong></li>
+        <li>Performance & vitesse (code, cache, images) : <strong>~60 €/h</strong></li>
+        <li>Ergonomie/design & accessibilité : <strong>~60 €/h</strong></li>
       </ul>
-      <p class="text-sm text-gray-600 italic">Tarif cohérent avec les TJM freelance observés sur la région Rennes et France (~300–400 €/j soit 60–80 €/h).</p>
     </div>
 
     <!-- Maintenance -->
@@ -479,11 +384,10 @@ TODO
       <h3 class="text-2xl font-semibold text-primary mb-5">Maintenance & support continu</h3>
       <p class="mb-6 text-gray-800 leading-relaxed">Abonnement mensuel tout inclus – installation initiale gratuite pendant 2 mois si j’ai créé votre site.</p>
       <ul class="list-disc list-inside text-left text-gray-700 space-y-2 mb-6">
-        <li>Site vitrine : <strong>~60 € / mois</strong></li>
+        <li>Site vitrine : <strong>~50 € / mois</strong></li>
         <li>Site e-commerce ou site à fort trafic : <strong>~100–120 € / mois</strong></li>
-        <li>Dépannage prioritaire ou interventions urgentes : <strong>option +20 €/mois</strong></li>
+        <li>Dépannage prioritaire ou interventions urgentes : <strong>option +10 €/mois</strong></li>
       </ul>
-      <p class="text-sm text-gray-600 italic">Ces tarifs se situent dans la fourchette standard en freelance (entre ~60 et 200 €/mois selon la complexité).</p>
     </div>
 
     <!-- Conseil & audit -->
@@ -514,8 +418,6 @@ TODO
     <h3 class="reco-title">Vous voulez être autonome sur votre contenu ?</h3>
     <p class="reco-text">Je peux vous proposer une solution sur <span class="lexique">WordPress</span> ou intégrer un éditeur simple, pour vous permettre de modifier facilement votre site.</p>
 </section> --}}
-
-
 
 {{-- To keep for data --}}
 {{-- <section class="section-container bg-light rounded-2xl p-6 md:p-10 my-12">
@@ -653,7 +555,7 @@ TODO
 </section> 
 
 
-{{-- Button cta --}}
+{{-- Button cta  ???? En double --}}
     <div 
         x-data="{ showHelper: false, dismissed: false }" 
         x-init="
@@ -680,7 +582,7 @@ TODO
 
                 <!-- Contenu -->
                 <p class="text-sm text-primary pr-4">Une question ? Demande de devis ?</p>
-                 {{-- <button id="start-quiz-btn-2" class="bg-primary text-white text-sm font-medium py-2 rounded-lg hover:bg-primary-dark transition cursor-pointer">
+                {{-- <button id="start-quiz-btn-2" class="bg-primary text-white text-sm font-medium py-2 rounded-lg hover:bg-primary-dark transition cursor-pointer">
                     Faire le questionnaire
                 </button> --}}
                 <a href="{{ url('/contact') }}" class="bg-primary text-white text-sm font-medium py-2 rounded-lg hover:bg-primary-dark transition cursor-pointer">Me contacter</a>

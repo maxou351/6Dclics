@@ -29,9 +29,9 @@
          role="menuitem">Création de site</a>
       </li>
       <li class="navbar__item" role="none">
-        <a href="{{ url('/profil-tech') }}" 
-         class="navbar__link @navactive('profil-tech')" 
-         role="menuitem">Profil technique</a>
+        <a href="{{ url('/mission-technique') }}" 
+         class="navbar__link @navactive('mission-technique')" 
+         role="menuitem">Mission technique</a>
       </li>
       {{-- <li class="navbar__item" role="none">
         <a href="{{ url('/projets') }}" 

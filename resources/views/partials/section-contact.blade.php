@@ -1,5 +1,5 @@
 {{-- Appel à l’action final --}}
-<section class="cta-final" aria-labelledby="cta-heading">
+<section id="cta-final" class="cta-final" aria-labelledby="cta-heading">
   <div class="cta-container">
 
     <h2 id="cta-heading" class="cta-title">

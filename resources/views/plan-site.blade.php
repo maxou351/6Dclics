@@ -8,7 +8,7 @@
         <li><a href="{{ url('/') }}" class="hover:text-blue-600">Accueil</a></li>
         <li><a href="{{ url('/accompagnement') }}" class="hover:text-blue-600">Accompagnement numérique</a></li>
         <li><a href="{{ url('/creation-site') }}" class="hover:text-blue-600">Création de site web</a></li>
-        <li><a href="{{ url('/profil-tech') }}" class="hover:text-blue-600">Profil technique</a></li>
+        <li><a href="{{ url('/mission-technique') }}" class="hover:text-blue-600">Mission technique</a></li>
         <li><a href="{{ url('/contact') }}" class="hover:text-blue-600">Contact</a></li>
         <li><a href="{{ url('/mentions-legales') }}" class="hover:text-blue-600">Mentions légales</a></li>
         <li><a href="{{ url('/confidentialite') }}" class="hover:text-blue-600">Politique de confidentialité</a></li>

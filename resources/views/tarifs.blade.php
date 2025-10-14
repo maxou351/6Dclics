@@ -1,6 +1,10 @@
 @extends('layouts.app')
 
-@section('title', 'Tarifs')
+@section('title', 'Tarifs – Les 6D\'Clics')
+@section('meta_description', "Découvrez les tarifs transparents pour l'aide informatique, la création de site web et l'accompagnement numérique proposés par Les 6D'Clics à Rennes et alentours.")
+@section('meta_keywords', 'tarifs, prix, développeur web Rennes, création site internet, dépannage informatique, aide numérique, formation informatique, freelance')
+@section('og_title', 'Tarifs – Les 6D\'Clics')
+@section('og_description', "Consultez les tarifs clairs et accessibles des 6D'Clics pour vos besoins en développement web, formation et assistance informatique.")
 
 @section('content')
     <section class="py-12 px-4 max-w-5xl mx-auto">
@@ -12,11 +16,11 @@
             <ul class="space-y-2">
             <li class="bg-white shadow rounded-xl p-4 flex justify-between">
                 <span>Dépannage à distance (1h)</span>
-                <span class="font-semibold text-primary">30–40 €</span>
+                <span class="font-semibold text-primary">40 €</span>
             </li>
             <li class="bg-white shadow rounded-xl p-4 flex justify-between">
                 <span>Dépannage à domicile (1h)</span>
-                <span class="font-semibold text-primary">40–50 €</span>
+                <span class="font-semibold text-primary">45 € + forfait déplacement supplémentaire si + 5km de Rennes </span>
             </li>
             <li class="bg-white shadow rounded-xl p-4 flex justify-between">
                 <span>Forfait 1h30</span>

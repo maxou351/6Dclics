@@ -37,7 +37,7 @@
             icon="heroicon-o-wrench-screwdriver"
             title="Développement & missions techniques"
             desc="Vous êtes recruteur ou porteur de projet et vous cherchez un développeur fiable et expérimenté ?"
-            url="/profil-tech"
+            url="/mission-technique"
             label="Voir le profil"
         />
     </div>

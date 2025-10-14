@@ -124,5 +124,6 @@ return [
     ],
 
     BladeUI\Heroicons\BladeHeroiconsServiceProvider::class,
+    Spatie\Sitemap\SitemapServiceProvider::class,
 
 ];

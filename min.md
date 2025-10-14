@@ -68,22 +68,30 @@ Ce guide décrit toutes les étapes pour déployer un site Laravel sur un héber
 
 ## 4. Déploiement du projet
 
-### Option A : FTP
+### Se connecter au server
 
-* Zipper ton projet **sauf** le dossier `vendor` et `node_modules`.
-* Envoyer via FTP dans `/web/tonsite`.
+* ssh user@server puis Password
+* cd sites/6Dclics
+* pwd pour récupérer le chemin du site
+* get php 8.4 path
+* /usr/bin/php-8.4 artisan config:clear
+*/usr/bin/composer_php8.4 install --no-dev --optimize-autoloader
+
+### En local
+
+* récupérer le chemin du dossier
+* rsync -avz --exclude=".git" ./ ug2l9y_system@ug2l9y.ftp.infomaniak.com:/home/clients/e2a8e00ba5925ecd5d5a50680574a000/sites/6dcli
+cs.fr/
+* vendor and node_module ?
+
+
+
 * Installer les dépendances sur le serveur (si SSH activé) :
 
   ```bash
   composer install --optimize-autoloader --no-dev
   npm ci --production
   ```
-
-### Option B : Git (recommandé)
-
-* Dans le Manager → activer **Git**.
-* Cloner ton repo dans `/web/tonsite`.
-* Exécuter `composer install` et `npm run build`.
 
 ---
 
@@ -116,6 +124,8 @@ Ce guide décrit toutes les étapes pour déployer un site Laravel sur un héber
      ```bash
      chmod -R 775 storage bootstrap/cache
      ```
+
+5. Build sitemap
 
 ---
 

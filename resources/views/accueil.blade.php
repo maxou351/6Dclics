@@ -1,7 +1,10 @@
-{{-- resources/views/accueil.blade.php --}}
 @extends('layouts.app')
 
-@section('title', "Les 6D'clics")
+@section('title', "Les 6D'clics – Création de site web & accompagnement numérique à Rennes")
+@section('meta_description', "Développeur web indépendant à Rennes, je crée des sites modernes et j’accompagne particuliers, associations et indépendants dans l’usage du numérique.")
+@section('meta_keywords', 'création site web Rennes, développeur freelance, aide informatique, accompagnement numérique, formation, dépannage')
+@section('og_title', 'Les 6D\'clics – Création de site web & accompagnement numérique à Rennes')
+@section('og_description', "Sites web sur mesure, formation et accompagnement informatique à Rennes. Simplicité, clarté et proximité au service de vos projets numériques.")
 
 {{--
 TODO 
@@ -61,7 +64,7 @@ TODO
                         icon="heroicon-o-code-bracket"
                         title="Développement & missions techniques"
                         desc="Vous êtes recruteur ou porteur de projet et vous cherchez un développeur fiable et expérimenté."
-                        url="/profil-tech"
+                        url="/mission-technique"
                         label="Voir le profil"
                     />
             </div>
@@ -311,7 +314,7 @@ TODO
             <h2 class="text-3xl font-bold text-center mb-12">Mon parcours</h2>
             <div class="text-right p-1">
                 <a
-                    href="{{ url('/profil-tech#cv') }}" 
+                    href="{{ url('/mission-technique#cv') }}" 
                     class="intro-btn"
                     role="button"
                 >
@@ -416,7 +419,7 @@ TODO
 
                 <!-- Missions techniques -->
                 <a 
-                    href="{{ url('/profil-tech') }}" 
+                    href="{{ url('/mission-technique') }}" 
                     class="services-card group" 
                     role="listitem" 
                     aria-label="Voir mon profil technique pour les missions techniques"

@@ -1,5 +1,9 @@
 @extends('layouts.app')
-@section('title', 'Profil technique')
+@section('title', 'Mission technique – Les 6D\'Clics')
+@section('meta_description', "Découvrez mon parcours, mes compétences et mes expériences en développement web. Technologies maîtrisées : Laravel, Symfony, Java, Ansible, Tailwind CSS, et plus encore.")
+@section('meta_keywords', 'développeur web Rennes, mission technique, Laravel, Symfony, Ansible, Tailwind, ingénieur développement, backend, frontend')
+@section('og_title', 'Profil technique – Max Morelli')
+@section('og_description', "Ingénieur études et développement à Rennes, spécialisé en PHP/Laravel, Java et DevOps. Découvrez mon parcours et mes projets professionnels.")
 
 @section('header')
     <section class="relative header-pages-section">
