@@ -112,7 +112,7 @@ TODO
 
                 <div class="div-img-bloc-duo">
                     <img 
-                      src="{{ asset('images/MaxMorelli.jpg') }}" 
+                      src="{{ asset('images/devPicture.webp') }}" 
                       class="img-bloc-duo" 
                       alt="Image" 
                     />
@@ -166,7 +166,7 @@ TODO
                 </div>
                 <div class="div-img-bloc-duo">
                     <img 
-                      src="{{ asset('images/grandma.png') }}"
+                      src="{{ asset('images/grandma.webp') }}"
                       class="img-bloc-duo" 
                       alt="Photo petit fils et grand-mère" 
                     />
