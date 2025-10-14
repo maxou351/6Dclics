@@ -236,7 +236,7 @@
     </div>
 </section>
 
-<section id="processus-story" class="py-20 px-6 max-w-5xl mx-auto text-center relative">
+<section id="processus-story" class="py-16 px-6 max-w-5xl mx-auto text-center relative border-t border-accent/40">
   <h2 class="text-3xl font-bold text-primary text-center mb-12">Votre parcours, étape par étape</h2>
   <p class="mb-16 text-gray-700 max-w-3xl mx-auto text-center">
     Chaque projet est une aventure unique. Voici comment nous collaborons, 
